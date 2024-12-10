@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.square {
+    height: 95px;
+    top: 0;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 0;
+    background: #2767B0;
+}
+
+.head-banner {
+    display: flex;
+    z-index: 1000;
+    position: absolute;
+    left: 5%;
+    top: 0px;
+    width: 90%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.head-image {
+    height: 80px;
+}
+
+.head-image:focus, .address:focus {
+    outline: none;
+    border: #dff3ff solid 2px;
+    border-radius: 5px;
+}
+
+.head-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.phone {
+    color: white;
+}
+
+.phone::before{
+    content:url('phone-icon.png');
+    position: relative;
+    left: -6px;
+    top: 3px;
+}
+
+.address {
+    color: white;
+    text-decoration: none;
+}
+
+.address::before{
+    content:url('address-icon.png');
+    position: relative;
+    left: -2px;
+    top: 1px;
+}
+
+.email {
+    top: 47px;
+    color: white;
+}
+
+.email::before{
+    content:url('email-icon.png');
+    position: relative;
+    left: -5px;
+    top: 3px;
+}
+
+.head-menu.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.head-menu ul {
+    table-layout: fixed;
+    width: 100%;
+    display: table;
+    padding: 0;
+    margin: 0;
+}
+
+.head-menu li {
+    display: table-cell;
+    background: #003366;
+    position: relative;
+}
+
+.head-menu ul li:hover {
+    background: #dff3ff;
+}
+
+.head-menu ul li:hover a {
+    color: #003366;
+}
+
+.head-menu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.head-menu ul li a:focus {
+    outline: none;
+    border: #dff3ff solid 3px;
+}
+
+.head-menu-caret:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .2em;
+    content: "";
+    border-top: .35em solid;
+    border-right: .35em solid transparent;
+    border-bottom: 0;
+    border-left: .35em solid transparent;
+}
+
+.head-menu li:hover ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.head-menu ul ul {
+    display: none;
+}
+
+.head-menu ul ul li {
+    display: block;
+}
+
+.head-menu ul ul li:first-child {
+    border-top: .2em solid #003366;
+}
+
+.head-menu ul ul li a {
+    color: #003366;
+    display: block;
+    padding: 8px 18px;
+    background: #dff3ff;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: rgba(00, 51, 102, 0.7);
+    text-decoration-thickness: .1em;
+}
+
+.head-menu ul ul li a:hover {
+    text-decoration: none;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1% 6%;
+    width: 88%;
+}
+
+.menu-card {
+    display: grid;
+    grid-template-rows: 300px 3fr;
+    border: 2px solid #003366;
+    padding: 0 16px 15px;
+    margin: 25px;
+    border-radius: 10px;
+    width: 35%;
+}
+
+.menu-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.menu-card h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.menu-card ul {
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 4%;
+}
+
+.menu-card ul li {
+    justify-content: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.menu-card ul li a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .head-image {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1125px) {
+    .head-menu li:hover ul {
+        width: 200%;
+    }
+    .address {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-menu {
+        margin: 1% 2%;
+        width: 96%;
+    }
+    .menu-card {
+        grid-template-rows: 200px 1fr 2fr;
+        padding: 8px 16px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
