@@ -15,4 +15,6 @@ function pinMenu() {
     updateMenu();
 }
 
-document.addEventListener('DOMContentLoaded', pinMenu)
+document.addEventListener('DOMContentLoaded', () => {
+    pinMenu();
+})

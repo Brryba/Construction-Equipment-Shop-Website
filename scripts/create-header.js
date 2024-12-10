@@ -1,3 +1,4 @@
+//Создает элемент header-component для вставки одинакового заголовка на все страницы
 
 class Header extends HTMLElement {
     constructor() {
@@ -54,6 +55,4 @@ class Header extends HTMLElement {
 
 customElements.define("header-component", Header);
 
-const header = document.createElement("header-component");
-
-document.body.insertBefore(header, document.body.firstChild);
+document.createElement()
