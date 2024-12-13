@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <header>
-            <div class="square"></div>
+            <div class="head-background"></div>
             <div class="head-banner">
                 <a class="head-image" href="../index.html">
                     <img src="images/head.png" alt="Логотип компании"/>
@@ -24,7 +24,6 @@ class Header extends HTMLElement {
                     <li><a class="head-menu-caret" href="index.html">Новое оборудование</a>
                         <ul>
                             <li><a href="index.html">Пневмонагнетатели</a></li>
-                            <li><a>Подъёмники</a></li>
                             <li><a>Компрессоры</a></li>
                         </ul>
                     </li>
@@ -43,9 +42,9 @@ class Header extends HTMLElement {
                             <li><a>Компрессоры</a></li>
                             <li><a>Пескоструйное оборудование</a></li>
                         </ul>
-                    </li>
+                        </li>
                     <li><a href="buy.html">Полезная информация</a></li>
-                    <li><a href="contact.html">Контакт</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -54,5 +53,3 @@ class Header extends HTMLElement {
 }
 
 customElements.define("header-component", Header);
-
-document.createElement()
