@@ -10,13 +10,11 @@ body {
     width: 100%;
     display: block;
     position: relative;
-    z-index: 0;
     background: #2767B0;
 }
 
 .head-banner {
     display: flex;
-    z-index: 1000;
     position: absolute;
     left: 5%;
     top: 0;
@@ -31,7 +29,7 @@ body {
     height: 80px;
 }
 
-.head-image:focus, .address:focus {
+.head-image:focus-visible, .address:focus-visible {
     outline: none;
     border: #dff3ff solid 2px;
     border-radius: 5px;
@@ -113,7 +111,7 @@ body {
     font-weight: bold;
 }
 
-.head-menu ul li a:focus {
+.head-menu ul li a:focus-visible {
     outline: none;
     border: #dff3ff solid 3px;
 }
@@ -180,10 +178,12 @@ body {
 .menu-card {
     display: grid;
     grid-template-rows: 300px 3fr;
-    border: 2px solid #003366;
+
+    border: 3px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 0 16px 15px;
     margin: 25px;
-    border-radius: 10px;
     width: 35%;
 }
 
@@ -231,46 +231,6 @@ body {
     color: #003366;
 }
 
-
-/*
-.equipment-types {
-    display: grid;
-    margin: 0 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.type-card-container {
-    display: grid;
-    grid-template-rows: 0.5fr 1fr;
-    height: 300px;
-    padding: 0 16px;
-    margin: 10px;
-    border: 3px solid #003366;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s;
-}
-
-.type-card-container:hover {
-    transform: scale(1.02);
-}
-
-.type-card-container h3 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.type-card-container img {
-    width: 100%;
-    height: 200px;
-    object-fit: fill;
-}
-
-*/
-
-
-
-
 .equipment-types {
     display: grid;
     margin: 0 2%;
@@ -279,6 +239,7 @@ body {
 }
 
 .type-card-container {
+    color: black;
     text-decoration: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,6 +257,7 @@ body {
 }
 
 .type-card-container:hover {
+    background-color: white;
     color: #000;
     transform: scale(1.03);
     border-color: #000;
@@ -373,6 +335,13 @@ body {
     .head-image {
         width: 35%;
     }
+    .page-footer > ul > li {
+        margin: 1%;
+    }
+
+    .page-footer li {
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 1125px) {
@@ -393,9 +362,6 @@ body {
         grid-template-rows: 200px 1fr 2fr;
         padding: 8px 16px;
         width: 40%;
-    }
-    .type-card-container {
-        height: 150px;
     }
 }
 
