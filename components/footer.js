@@ -16,12 +16,12 @@ class Footer extends HTMLElement {
             <h3 class="phone">Наши телефоны:</h3>
             <ul>
                 <li>+375 (17) 272-27-39</li>
-                <li>242-41-93</li>
+                <li>+375 (17) 242-41-93</li>
             </ul>
         </li>
         <li>
             <h3 class="address">Наш адрес:</h3>
-            <a class="footer-label" href="https://yandex.by/maps/-/CHEIE05j" target="blank">
+            <a class="footer-label" href="https://yandex.by/maps/-/CHEIE05j" target="blank" tabindex="-1">
                 220070, Республика Беларусь, г.Минск ул.Радиальная, 11Б/1, помещение №4</a>
         </li>
     </ul>

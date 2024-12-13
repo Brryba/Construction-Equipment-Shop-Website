@@ -232,7 +232,7 @@ body {
 
 .page-footer ul li {
     list-style: none;
-    color: #dff3ff;
+    color: #fff;
 }
 
 .page-footer > ul {
@@ -254,7 +254,7 @@ body {
 }
 
 .page-footer a {
-    color: #dff3ff;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -283,7 +283,7 @@ body {
     .head-menu li:hover ul {
         width: 200%;
     }
-    .footer .address {
+    header .address {
         display: none;
     }
 }
