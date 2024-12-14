@@ -2,10 +2,17 @@ function ProductCard(props) {
     const {useState} = React;
     return (
         <div className="product-card-container">
-            <div className="features">{props.features}</div>
-            <img src={props.image} alt="Фото не найдено."></img>
-            <h3>Цена: {props.price}</h3>
-            <button>Подробнее</button>
+            <h2>{props.name}</h2>
+            <div className="content">
+                <div className="text">
+                    {props.features}
+                    <h3>Цена: {props.price}</h3>
+                    <button>Подробнее</button>
+                </div>
+                <div className="photo">
+                    <img src={props.image} alt="Фото не найдено."></img>
+                </div>
+            </div>
         </div>
     );
 }
@@ -18,6 +25,7 @@ productCards.forEach(card => {
     features.forEach((feature, index) => {
         features[index] = feature.trim();
     });
+    features = features.filter(item => item !== "");
     const featuresList = features.map((item) => <p>{item}</p>);
     console.log(card.getAttribute('image'));
 
