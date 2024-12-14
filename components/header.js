@@ -10,7 +10,7 @@ class Header extends HTMLElement {
             <div class="head-background"></div>
             <div class="head-banner">
                 <a class="head-image" href="index.html">
-                    <img src="/images/head.png" alt="Логотип компании"/>
+                    <img src="images/head/head.png" alt="Логотип компании"/>
                 </a>
                 <div class="phone">+375 (17) 272-27-39</div>
                 <div class="email">info@mirostat.by</div>
@@ -29,7 +29,7 @@ class Header extends HTMLElement {
                     </li>
                     <li><a class="head-menu-caret" href="bu.html">Техника Б/У</a>
                         <ul>
-                            <li><a href="index.html">Пневмонагнетатели</a></li>
+                            <li><a href="bu-pnevmo.html">Пневмонагнетатели</a></li>
                             <li><a>Подъёмники</a></li>
                             <li><a>Компрессоры</a></li>
                             <li><a>Прочее оборудование</a></li>

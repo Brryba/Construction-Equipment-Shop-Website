@@ -1,4 +1,4 @@
-//Создает элемент footer-component для вставки одинакового заголовка на все страницы
+//Создает элемент footer-component для вставки одинаковой нижней части на все страницы
 
 class Footer extends HTMLElement {
     constructor() {
