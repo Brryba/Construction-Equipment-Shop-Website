@@ -30,7 +30,7 @@ class Header extends HTMLElement {
                     <li><a class="head-menu-caret" href="bu.html">Техника Б/У</a>
                         <ul>
                             <li><a href="bu-pnevmo.html">Пневмонагнетатели</a></li>
-                            <li><a>Подъёмники</a></li>
+                            <li><a href="bu-podyomniki.html">Подъёмники</a></li>
                             <li><a>Компрессоры</a></li>
                             <li><a>Прочее оборудование</a></li>
                         </ul>
