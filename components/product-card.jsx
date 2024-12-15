@@ -1,3 +1,43 @@
+function ImageSlider(props) {
+    const {useState} = React;
+    const [imageIndex, setImageIndex] = useState(0);
+
+    function next() {
+        setImageIndex((imageIndex + 1) % props.images.length);
+    }
+
+    function prev() {
+        if (imageIndex === 0) {
+            setImageIndex(props.images.length - 1);
+        } else {
+            setImageIndex(imageIndex - 1);
+        }
+    }
+
+    return (
+        <div className="image-slider">
+            {props.images[imageIndex]}
+            <div className="move-buttons-container">
+                <button className="move-buttons prevButton" onClick={prev}>
+                    <img src="images/bu/main/left-arrow.png" alt="Предыдущая"></img>
+                </button>
+                <button className="move-buttons nextButton" onClick={next}>
+                    <img src="images/bu/main/right-arrow.png" alt="Следующая"></img>
+                </button>
+            </div>
+            <div className="dots-container">
+                {props.images.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === imageIndex ? 'active' : ''}`}
+                        onClick={() => setImageIndex(index)}
+                    ></span>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 function ProductCard(props) {
     const {useState} = React;
 
@@ -30,17 +70,21 @@ function ProductCard(props) {
             {isModalOpen && (
                 <div className="modal-background" onClick={handleCloseModal}>
                     <div className="modal" onClick={(closing) => closing.stopPropagation()}>
-                    <div className="images">
-                            <img src={props.image} alt={props.name} className="modal-image"/>
-                            {props.images}
-                        </div>
+                        <ImageSlider
+                            image=<img className="modal-image" src={props.image} alt="Фото не найдено."/>
+                        images={props.images}
+                        />
                         <div className="content">
                             <h2>{props.name}</h2>
-                            {props.features}
-                            {props.other}
+                            <div className="features">
+                                {props.features}
+                                {props.other}
+                            </div>
                             <h3>Цена: {props.price}</h3>
                         </div>
-                        <span className="close-button" onClick={handleCloseModal}>Закрыть</span>
+                        <span onClick={handleCloseModal}>
+                            <img src="images/bu/main/close.png" alt="Close" className="close-icon"/>
+                        </span>
                     </div>
                 </div>
             )}
@@ -67,13 +111,15 @@ productCards.forEach(card => {
         return featuresArr.length > 0 ? featuresArr.map((item) => <p>{item}</p>) : <div></div>;
     }
 
-    function parseImages(images) {
+    function parseImages(image, images) {
         if (images === undefined || images === null) {
-            return <div></div>;
+            return [<img src={image} alt="Фото не найдено." className="modal-image"></img>];
         }
         let imagesArr = splitInput(images);
-        return imagesArr.length > 0 ? imagesArr.map((item) => <img src={item} alt="Фото не найдено."
-                                                                   className="modal-image"></img>) : <div></div>;
+        let imgComponents = imagesArr.length > 0 ? imagesArr.map((item) =>
+            <img src={item} alt="Фото не найдено." className="modal-image"></img>) : <div></div>;
+        imgComponents.unshift(<img src={image} alt="Фото не найдено." className="modal-image"></img>);
+        return imgComponents;
     }
 
     ReactDOM.createRoot(card).render(<ProductCard
@@ -82,6 +128,6 @@ productCards.forEach(card => {
         price={card.getAttribute('price')}
         other={parseFeatures(card.getAttribute('other'))}
         image={card.getAttribute('image')}
-        images={parseImages(card.getAttribute('images'))}
+        images={parseImages(card.getAttribute('image'), card.getAttribute('images'))}
     />);
 });
