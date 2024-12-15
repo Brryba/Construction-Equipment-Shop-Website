@@ -79,6 +79,7 @@ function ProductCard(props) {
                             <div className="features">
                                 {props.features}
                                 {props.other}
+                                {props.video}
                             </div>
                             <h3>Цена: {props.price}</h3>
                         </div>
@@ -108,7 +109,7 @@ productCards.forEach(card => {
             return <div></div>;
         }
         let featuresArr = splitInput(features);
-        return featuresArr.length > 0 ? featuresArr.map((item) => <p>{item}</p>) : <div></div>;
+        return featuresArr.length > 0 ? featuresArr.map((item) => <p className="feature">{item}</p>) : <div></div>;
     }
 
     function parseImages(image, images) {
@@ -122,6 +123,14 @@ productCards.forEach(card => {
         return imgComponents;
     }
 
+    function parseVideo(link) {
+        console.log(link);
+        if (link === undefined || link === null) {
+            return <div></div>;
+        }
+        return <a href={link} className="feature"><strong>Смотреть видео-обзор!</strong></a>
+    }
+
     ReactDOM.createRoot(card).render(<ProductCard
         name={card.getAttribute('name')}
         features={parseFeatures(card.getAttribute('features'))}
@@ -129,5 +138,6 @@ productCards.forEach(card => {
         other={parseFeatures(card.getAttribute('other'))}
         image={card.getAttribute('image')}
         images={parseImages(card.getAttribute('image'), card.getAttribute('images'))}
+        video={parseVideo(card.getAttribute('video'))}
     />);
 });

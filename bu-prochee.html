@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>ООО "Миростат"</title>
+  <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="components/header.js" type="text/javascript"></script>
+  <script src="components/footer.js" type="text/javascript"></script>
+  <script src="scripts/modal.js" type="text/javascript"></script>
+  <script src="components/product-card.jsx" type="text/babel"></script>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header-component></header-component>
+<main>
+  <h1 class="main-h1">Прочее оборудование Б/У</h1>
+  <section class="products">
+    <div class="product-card"
+         name="Бензорез Husqvarna K 970 с диском 350мм"
+         features='Год выпуска: 2011;
+                Мощность - 4,8кВт;
+                Глубина реза: до 125мм;
+                Функция "Лёгкий спуск";
+                Бензиновый двухтактный двигатель;
+                Вес без режущего инструмента и топлива: 10,6кг;
+                Ёмкость топливного бака: 1л'
+         price="450 евро + НДС"
+    >
+    </div>
+    <div class="product-card"
+         name="Дизельный двигатель Kubota D905"
+         features="Год выпуска: 2000;
+                Мощность: 17 л.с.;
+                Объём: 0,95 л;
+                Количество цилиндров: 3;"
+         price="Договорная"
+    >
+    </div>
+    <div class="product-card"
+         name="Дизельный двигатель Perkins 404-22 (Caterpillar 3024 C) на запчасти"
+         features="Мощность: 37 кВт;
+                Объём: 2,2 л;
+                Количество цилиндров: 4;
+                Продается: поршневая, топливный насос высокого давления ТНВД, форсунки и т.д."
+         price="Договорная"
+    >
+    </div>
+    <div class="product-card"
+         name="Штукатурный насос СО-49"
+         features="Производительность: 4,0м3/ч;
+                Дальность подачи: 35/100м;
+                Мощность двигателя: 4,0кВт;
+                Вес растворонасоса: 200кг;
+                Диаметр подключаемого рукава: 50мм"
+         price="450 евро с НДС"
+    >
+    </div>
+  </section>
+
+  <script src="components/type-card.jsx" type="text/babel"></script>
+</main>
+<footer-component></footer-component>
+<script src="scripts/script.js"></script>
+</body>
+</html>

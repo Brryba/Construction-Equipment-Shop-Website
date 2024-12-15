@@ -31,8 +31,8 @@ class Header extends HTMLElement {
                         <ul>
                             <li><a href="bu-pnevmo.html">Пневмонагнетатели</a></li>
                             <li><a href="bu-podyomniki.html">Подъёмники</a></li>
-                            <li><a>Компрессоры</a></li>
-                            <li><a>Прочее оборудование</a></li>
+                            <li><a href="bu-compressory.html">Компрессоры</a></li>
+                            <li><a href="bu-prochee.html">Прочее оборудование</a></li>
                         </ul>
                     </li>
                     <li><a class="head-menu-caret" href="arenda.html">Аренда техники</a>

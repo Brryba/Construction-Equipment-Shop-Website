@@ -258,7 +258,7 @@ body {
         color: #000;
     }
 
-    &:hover {
+    &:hover, &:focus {
         background-color: white;
         color: #000;
         transform: scale(1.03);
@@ -341,9 +341,10 @@ body {
                 cursor: pointer;
                 transition: transform 0.3s, background-color 0.3s;
 
-                &:hover {
+                &:hover, &:focus {
                     transform: scale(1.1);
                     background-color: #003366;
+                    outline: none;
                 }
             }
         }
@@ -454,7 +455,7 @@ body {
     }
 
     .modal-image {
-        margin: 2%;
+        margin: 0 0 0 2%;
         max-width: 96%;
         max-height: 80vh;
         border-radius: 10px;
@@ -514,11 +515,10 @@ body {
             flex-direction: column;
             justify-content: space-between;
 
-            p {
+            .feature {
                 border: 1px solid #ddd;
                 border-left: 4px solid #0056b3;
-                padding: 5px;
-                padding-left: 1rem;
+                padding: 5px 5px 5px 1rem;
                 margin: 1.5vh 4rem 1.5vh 1rem;
             }
         }
@@ -590,9 +590,6 @@ body {
 }
 
 @media (max-width: 1125px) {
-    .head-menu li:hover ul {
-        width: 200%;
-    }
     header .address {
         display: none;
     }
