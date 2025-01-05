@@ -58,6 +58,7 @@ function ProductCard(props) {
             <h2>{props.name}</h2>
             <div className="content">
                 <div className="text">
+                    {props.video}
                     {props.features}
                     <h3>Цена: {props.price}</h3>
                     <button onClick={handleOpenModal}>Подробнее</button>
@@ -128,7 +129,7 @@ productCards.forEach(card => {
         if (link === undefined || link === null) {
             return <div></div>;
         }
-        return <a href={link} className="feature"><strong>Смотреть видео-обзор!</strong></a>;
+        return <a href={link} className="feature" target="_blank"><strong>Смотреть видео-обзор!</strong></a>;
     }
 
     ReactDOM.createRoot(card).render(<ProductCard

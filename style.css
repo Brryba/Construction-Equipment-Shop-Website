@@ -364,6 +364,11 @@ body {
                 }
             }
         }
+
+        a {
+            color: black;
+            font-weight: normal;
+        }
     }
 }
 
@@ -527,6 +532,10 @@ body {
             text-align: center;
             margin-bottom: 2rem;
         }
+
+        a {
+            color: blue;
+        }
     }
 
     .close-icon {
@@ -539,7 +548,7 @@ body {
         transition: transform 0.3s;
 
         &:hover {
-            transform: scale(1.2);
+            transform: rotate(90deg) scale(1.15);
         }
     }
 
