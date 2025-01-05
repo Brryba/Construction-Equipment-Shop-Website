@@ -569,6 +569,67 @@ body {
     }
 }
 
+.rent-types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1% 6%;
+    column-gap: 10vw;
+    row-gap: 4vh;
+
+    .rent-type-card {
+        border: #003366 7px solid;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 40, 80, 0.5);
+        width: 30vw;
+        height: 30vw;
+
+        .rent-type-card-container {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            text-decoration: none;
+
+            img {
+                object-fit: fill;
+                margin-top: 10%;
+                margin-bottom: 2.5%;
+                width: 30vw;
+                height: 15vw;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    text-align: center;
+                    margin: 0 3.5rem 3.5rem;
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+
+            &:hover, &:focus {
+                outline: none;
+
+                img {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                }
+
+                h2 {
+                    transition: 0.3s;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1000px) {
     body {
         font-size: 0.9rem;
@@ -600,19 +661,38 @@ body {
         margin: 1% 2%;
         width: 96%;
     }
+
     .menu-card {
         grid-template-rows: 200px 1fr 2fr;
         padding: 8px 16px;
         width: 40%;
     }
+
     .products {
         margin: 0;
     }
+
     .product-card-container .content {
         grid-template-columns: 1fr 1.5fr;
     }
+
     .product-card-container .content .photo {
         justify-content: flex-start;
+    }
+
+    .rent-types {
+        column-gap: 5rem;
+        margin: 0;
+    }
+
+    .rent-type-card {
+        min-width: 40vw;
+        min-height: 40vw;
+
+        img {
+            min-width: 40vw;
+            min-height: 20vw;
+        }
     }
 }
 

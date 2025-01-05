@@ -35,7 +35,7 @@ class Header extends HTMLElement {
                             <li><a href="bu-prochee.html">Прочее оборудование</a></li>
                         </ul>
                     </li>
-                    <li><a class="head-menu-caret" href="arenda.html">Аренда техники</a>
+                    <li><a class="head-menu-caret" href="rent.html">Аренда техники</a>
                         <ul>
                             <li><a href="index.html">Пневмонагнетатели</a></li>
                             <li><a>Подъёмники</a></li>

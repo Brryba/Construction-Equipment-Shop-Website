@@ -97,7 +97,7 @@ const productCards = document.querySelectorAll('.product-card');
 
 productCards.forEach(card => {
     function splitInput(notes) {
-        let notesArr = notes.split(';');
+        let notesArr = notes.split(/[;\n]/g);
         notesArr.forEach((note, index) => {
             notesArr[index] = note.trim();
         });
@@ -128,7 +128,7 @@ productCards.forEach(card => {
         if (link === undefined || link === null) {
             return <div></div>;
         }
-        return <a href={link} className="feature"><strong>Смотреть видео-обзор!</strong></a>
+        return <a href={link} className="feature"><strong>Смотреть видео-обзор!</strong></a>;
     }
 
     ReactDOM.createRoot(card).render(<ProductCard
