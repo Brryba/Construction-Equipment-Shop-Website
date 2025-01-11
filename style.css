@@ -732,7 +732,7 @@ body {
     }
 }
 
-.pnevmo-rent-types {
+.pnevmo-rent-devices {
     width: 70%;
     margin-left: 15%;
     display: flex;
@@ -747,9 +747,14 @@ body {
         border: #003366 3px solid;
         border-radius: 20px;
         padding: 2rem 1rem;
+        transition: 0.5s;
 
         p {
             font-weight: bold;
+        }
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }

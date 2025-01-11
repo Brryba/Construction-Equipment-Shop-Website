@@ -37,7 +37,7 @@ class Header extends HTMLElement {
                     </li>
                     <li><a class="head-menu-caret" href="rent.html">Аренда техники</a>
                         <ul>
-                            <li><a href="index.html">Пневмонагнетатели</a></li>
+                            <li><a href="rent-pnevmo.html">Пневмонагнетатели</a></li>
                             <li><a>Подъёмники</a></li>
                             <li><a>Компрессоры</a></li>
                             <li><a>Пескоструйное оборудование</a></li>
