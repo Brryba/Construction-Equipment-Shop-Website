@@ -81,6 +81,7 @@ body {
 }
 
 .head-menu {
+    z-index: 1000;
     &.fixed {
         position: fixed;
         top: 0;
@@ -606,6 +607,8 @@ body {
                 margin-bottom: 2.5%;
                 width: 30vw;
                 height: 15vw;
+                transform: scale(1);
+                transition: 0.1s;
             }
 
             div {
@@ -619,6 +622,8 @@ body {
                     margin: 0 3.5rem 3.5rem;
                     color: black;
                     font-weight: bold;
+                    transform: scale(1);
+                    transition: 0.1s;
                 }
             }
 
@@ -635,6 +640,79 @@ body {
                     transform: scale(1.05);
                 }
             }
+        }
+    }
+}
+
+.table {
+    width: 96%;
+    margin: 0 2%;
+    border-collapse: collapse;
+
+    thead {
+        color: white;
+        th {
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-left: 2px solid white;
+            padding: 10px 15px;
+            background: #0056b3;
+
+            &:first-child {
+                border-left: none;
+                border-radius: 20px 0 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 20px 0 0;
+            }
+        }
+    }
+
+    tbody {
+
+        td {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+
+        tr:nth-child(even) {
+            background: #e7f3fe;
+        }
+
+        tr:first-child td {
+            border-top: 3px solid black;
+        }
+
+        &:first-of-type tr:first-child td {
+            border-top: none;
+        }
+    }
+
+    tfoot {
+        height: 3px;
+
+        td {
+            background: black;
+            border-radius: 0 0 7px 7px;
+        }
+    }
+
+    .td-photo {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+
+        img {
+            width: 100%;
+        }
+
+        b {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1em;
         }
     }
 }
@@ -701,6 +779,20 @@ body {
         img {
             min-width: 40vw;
             min-height: 20vw;
+        }
+    }
+
+    .td-photo {
+        grid-template-rows: 0.8fr 0.2fr;
+
+        img {
+            grid-column: 1/-1;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        b {
+            grid-column: 1/-1;
         }
     }
 }
