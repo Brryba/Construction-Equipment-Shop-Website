@@ -644,10 +644,24 @@ body {
     }
 }
 
+.rent-pnevmo-options {
+    list-style: revert;
+
+    li {
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    li::marker {
+        color: #003366;
+        font-weight: bold;
+    }
+}
+
 .table {
     width: 96%;
-    margin: 0 2%;
     border-collapse: collapse;
+    margin: 0 2% 3rem;
 
     thead {
         color: white;
@@ -661,11 +675,11 @@ body {
 
             &:first-child {
                 border-left: none;
-                border-radius: 20px 0 0 0;
+                border-radius: 10px 0 0 0;
             }
 
             &:last-child {
-                border-radius: 0 20px 0 0;
+                border-radius: 0 10px 0 0;
             }
         }
     }
@@ -706,6 +720,7 @@ body {
 
         img {
             width: 100%;
+            border-radius: 5px;
         }
 
         b {
@@ -714,6 +729,40 @@ body {
             align-items: center;
             font-size: 1.1em;
         }
+    }
+}
+
+.pnevmo-rent-types {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+
+    .pnevmo-rent-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: #003366 3px solid;
+        border-radius: 20px;
+        padding: 2rem 1rem;
+
+        p {
+            font-weight: bold;
+        }
+    }
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    margin: 0 10vw;
+    column-gap: 5vw;
+
+    img {
+        width: 20%;
+        border: 2px solid black;
     }
 }
 
@@ -794,6 +843,15 @@ body {
         b {
             grid-column: 1/-1;
         }
+    }
+
+    .pnevmo-rent-types {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .photos {
+        margin: 0;
     }
 }
 
