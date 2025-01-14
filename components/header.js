@@ -40,7 +40,7 @@ class Header extends HTMLElement {
                             <li><a href="rent-pnevmo.html">Пневмонагнетатели</a></li>
                             <li><a>Подъёмники</a></li>
                             <li><a>Компрессоры</a></li>
-                            <li><a>Пескоструйное оборудование</a></li>
+                            <li><a href ="rent-peskostruy.html">Пескоструйное оборудование</a></li>
                         </ul>
                         </li>
                     <li><a href="buy.html">Полезная информация</a></li>
