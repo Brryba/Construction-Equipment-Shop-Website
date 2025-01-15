@@ -417,6 +417,7 @@ body {
 }
 
 .modal-background {
+    z-index: 10000;
     position: fixed;
     top: 0;
     left: 0;
@@ -426,7 +427,7 @@ body {
 }
 
 .modal {
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 5%;
     right: 5%;
@@ -781,6 +782,10 @@ body {
     img {
         width: 25%;
         border: 2px solid black;
+    }
+
+    .vertical {
+        width: 18%;
     }
 }
 
