@@ -23,7 +23,7 @@ class Header extends HTMLElement {
                     <li><a href="index.html">Главная</a></li>
                     <li><a class="head-menu-caret" href="index.html">Новое оборудование</a>
                         <ul>
-                            <li><a href="index.html">Пневмонагнетатели</a></li>
+                            <li><a href="pulsar.html">Пневмонагнетатели</a></li>
                             <li><a>Компрессоры</a></li>
                         </ul>
                     </li>
