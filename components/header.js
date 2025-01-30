@@ -21,10 +21,10 @@ class Header extends HTMLElement {
             <nav class="head-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a class="head-menu-caret" href="index.html">Новое оборудование</a>
+                    <li><a class="head-menu-caret">Новое оборудование</a>
                         <ul>
                             <li><a href="pulsar.html">Пневмонагнетатели</a></li>
-                            <li><a>Компрессоры</a></li>
+                            <li><a href="new-compr.html">Компрессоры</a></li>
                         </ul>
                     </li>
                     <li><a class="head-menu-caret" href="bu.html">Техника Б/У</a>
@@ -40,7 +40,7 @@ class Header extends HTMLElement {
                             <li><a href="rent-pnevmo.html">Пневмонагнетатели</a></li>
                             <li><a href="rent-podyomniki.html">Подъёмники</a></li>
                             <li><a href="rent-compr.html">Компрессоры</a></li>
-                            <li><a href ="rent-peskostruy.html">Пескоструйное оборудование</a></li>
+                            <li><a href="rent-peskostruy.html">Пескоструйное оборудование</a></li>
                         </ul>
                         </li>
                     <li><a href="buy.html">Полезная информация</a></li>
