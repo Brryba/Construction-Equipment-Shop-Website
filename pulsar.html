@@ -21,84 +21,6 @@
             width: 50%;
         }
 
-        .slideshow-container {
-            max-width: 50vw;
-            margin: 0 25vw;
-            position: relative;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .mySlides {
-            display: none;
-
-            &:first-child {
-                display: block;
-            }
-
-            img {
-                scroll-snap-align: start;
-            }
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 1rem;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 1rem;
-            width: 1rem;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        .active {
-            background-color: #333;
-        }
-
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
         @keyframes fade {
             from {
                 opacity: .4
@@ -107,39 +29,79 @@
                 opacity: 1
             }
         }
+
+        #advantages {
+            list-style-type: none;
+            padding: 0 0 0 1vw;
+
+            li h3::before {
+                content: "✔";
+                color: chartreuse;
+                padding-right: 0.5rem;
+            }
+
+            li h3 {
+                color: darkgreen;
+                margin: 5px 0;
+            }
+
+            li p {
+                margin: 10px 1vw;
+            }
+        }
+
+        #advantages-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .adv-with-photo {
+                display: grid;
+                grid-template-rows: 10vh 30vh;
+                width: 28vw;
+                height: 42vh;
+                margin: 1rem;
+                padding: 1rem;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                border: 2px black solid;
+                border-radius: 10px;
+
+                img {
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                    width: 28vw;
+                }
+
+                h3 {
+                    text-align: center;
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+                p {
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 1rem;
+                    padding: 0.5rem;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    line-height: 1.5rem;
+                    font-size: 1.2rem;
+                    transition: 0.3s;
+                }
+
+                &:hover p {
+                    opacity: 1 !important;
+                }
+            }
+        }
     </style>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
+    <script src="scripts/slider.js">
     </script>
 </head>
 <body>
@@ -155,9 +117,17 @@
     </div>
 
 
-    <b style="font-size:1.2rem; margin-left: 3vw">
-        Представляем Вам новинку - отличное решение для механизации процесса укладки полусухой стяжки пола.
+    <b style="font-size:1.2rem; margin: 1rem">
+        Представляем Вам новинку - отличное решение для механизации процесса укладки полусухой стяжки пола:
     </b>
+    <p style="margin: 1rem 1rem 0; text-align: justify">
+        <b>Пневмонагнетатель Pulsar</b> применяется для подъёма на этажи цементно-песчаных растворов и легких бетонов,
+        предназначенных для устройства стяжки пола. Пневмонагнетатель оборудован смесителем принудительного действия, в
+        котором можно готовить раствор путем смешивания компонентов или использовать готовый раствор. Подавать можно
+        сухие, полусухие и жидкие растворо-бетонные смеси с размером фракции твердых включений до 16 мм на высоту до 30
+        этажей. Раствор подаётся по магистрали рукавов под давлением сжатого воздуха при помощи встроенного дизельного
+        компрессора высокой производительности.
+    </p>
 
     <h1 class="main-header">Технические характеристики пневмонагнетателя Pulsar 530 D</h1>
 
@@ -264,6 +234,80 @@
         <span class="dot" onclick="currentSlide(6)"></span>
         <span class="dot" onclick="currentSlide(7)"></span>
     </div>
+
+    <h1 class="main-header">Основные преимущества Pulsar 530 D</h1>
+
+    <ul id="advantages">
+        <li>
+            <h3>Отличная производительность</h3>
+            <p>— Компрессор с прямым приводом от мощного 4-цилиндрового дизельного двигателя</p>
+        </li>
+        <li>
+            <h3>Экономия</h3>
+            <p>— Доступная стоимость машины</p>
+        </li>
+        <li>
+            <h3>Нержавеющая сталь</h3>
+            <p>— Рабочая поверхность и зона примыкания смесителя к кузову машины сделаны из нержавеющих материалов</p>
+        </li>
+        <li>
+            <h3>Удобный доступ</h3>
+            <p>— Все компоненты машины скомбинированы и удобно расположены внутри машины, обеспечивая легкий доступ</p>
+        </li>
+        <li>
+            <h3>Большой объём</h3>
+            <p>— Смесительный бункер увеличен до 300 литров</p>
+        </li>
+        <li>
+            <h3>ЭПСМ</h3>
+            <p>— Смесительный бункер увеличен до 300 литров</p>
+        </li>
+        <li>
+            <h3>И много другого!</h3>
+            <p>— Техника оборудована гидравлической тормозной системой, системой стояночного тормоза, светотехникой,
+                имеет
+                зацепное устройство "кольцо" или "шар". Рекомендуемая скорость до 25 км/час.</p>
+        </li>
+    </ul>
+
+    <section id="advantages-photos">
+        <div class="adv-with-photo">
+            <h3>Система безопасности крышки бункера-смесителя</h3>
+            <img src="images/new/pulsar/kryshka.jpg" alt="Крышка">
+            <p>Разработана нашими инженерами на основе многолетнего опыта обслуживания и эксплуатации
+                пневмонагнетателей</p>
+        </div>
+        <div class="adv-with-photo">
+            <h3>Централизованная система смазки</h3>
+            <img src="images/new/pulsar/smazka.jpg" alt="Смазка">
+            <p>Автоматическая подача смазки в подшипниковые узлы смесителя</p>
+        </div>
+        <div class="adv-with-photo">
+            <h3>Регулируемое по высоте прицепное дышло</h3>
+            <img src="images/new/pulsar/dyshlo.jpg" alt="Дышло">
+            <p>Позволяет без особых усилий настроить необходимую высоту зацепления для буксировки</p>
+        </div>
+        <div class="adv-with-photo">
+            <h3>Пружинный усилитель крышки смесителя</h3>
+            <img src="images/new/pulsar/pruzhina.jpg" alt="Пружина">
+            <p>Облегчает процесс многочисленных операций поднятия/опускания крышки бункера-смесителя</p>
+        </div>
+        <div class="adv-with-photo">
+            <h3>Каналы смазки в пальцах замка крышки смесителя</h3>
+            <img src="images/new/pulsar/paltsy.jpg" alt="Пальцы">
+            <p>Разработаны нашими инженерами, позволяют существенно снизить износ и количество обращений в сервисные службы</p>
+        </div>
+        <div class="adv-with-photo">
+            <h3>Металлические арки колес</h3>
+            <img src="images/new/pulsar/arka.jpg" alt="Арка">
+            <p>Позволяют использовать их как прочную горизонтальную поверхность</p>
+        </div>
+    </section>
+
+    <h2 class="main-header">Важные дополнительные особенности конструкции</h2>
+    <ul>
+        <li></li>
+    </ul>
 </main>
 <footer-component></footer-component>
 <script src="scripts/script.js"></script>
