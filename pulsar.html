@@ -17,6 +17,10 @@
             }
         }
 
+        .table {
+            margin-bottom: 1rem;
+        }
+
         .table th {
             width: 50%;
         }
@@ -82,6 +86,7 @@
                 }
 
                 p {
+                    text-align: center;
                     opacity: 0;
                     position: absolute;
                     bottom: 0;
@@ -98,6 +103,39 @@
                     opacity: 1 !important;
                 }
             }
+        }
+
+        .with-icon {
+            text-decoration: none;
+            margin: 0;
+
+            &::before {
+                position: relative;
+                left: -10px;
+                top: 5px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        #address::before {
+            content: url('images/new/pulsar/address.png');
+        }
+
+        #website::before {
+            content: url('images/new/pulsar/website.png');
+        }
+
+        #phone::before {
+            content: url('images/new/pulsar/phone.png');
+        }
+
+        #mail::before {
+            content: url('images/new/pulsar/mail.png');
+        }
+
+        #person::before {
+            content: url('images/new/pulsar/person.png');
         }
     </style>
 
@@ -141,7 +179,7 @@
         <tbody>
         <tr>
             <td>Производительность по подаче раствора</td>
-            <td>до 4,5 м3/ч</td>
+            <td>до 4,5 м³/ч</td>
         </tr>
 
         <tr>
@@ -154,7 +192,7 @@
         </tr>
         <tr>
             <td>Производительность компрессора</td>
-            <td>5,2 м3/мин</td>
+            <td>5,2 м³/мин</td>
         </tr>
         <tr>
             <td>Максимальная крупность фракции</td>
@@ -182,6 +220,11 @@
         </tr>
         </tbody>
     </table>
+
+    <div style="display: flex; justify-content: space-around; margin-bottom: 1rem; color: #003366">
+        <p style="text-align: center"><b>Цена для РБ:<br>98 000,00 бел. руб. + НДС.</b></p>
+        <p style="text-align: center"><b>Цена для РФ:<br>2 750 000,00 росс. руб. + НДС.</b></p>
+    </div>
 
     <div class="slideshow-container">
 
@@ -260,7 +303,8 @@
         </li>
         <li>
             <h3>ЭПСМ</h3>
-            <p>— Смесительный бункер увеличен до 300 литров</p>
+            <p>— на поставляемую технику, при необходимости, оформляется электронный паспорт самоходной машины, что
+                делает возможным перемещение по дорогам общего пользования в качестве прицепа</p>
         </li>
         <li>
             <h3>И много другого!</h3>
@@ -305,9 +349,76 @@
     </section>
 
     <h2 class="main-header">Важные дополнительные особенности конструкции</h2>
-    <ul>
-        <li></li>
+    <ul class="rent-options">
+        <li>Фонарь освещения рабочей зоны в темное время суток</li>
+        <li>Прочные резиновые отбойники загрузочной воронки и крышки смесителя</li>
+        <li>Номерная рамка со световой сигнализацией</li>
     </ul>
+    <div class="photos">
+        <img src="images/new/pulsar/fonar.jpg" alt="Фонарь">
+        <img src="images/new/pulsar/demp.jpg" alt="Отбойники">
+        <img src="images/new/pulsar/planka.jpg" alt="Планка">
+    </div>
+
+    <h2 class="main-header">Комплектующие для пневмонагнетателя</h2>
+    <section class="complectation">
+        <div class="complectation-card">
+            <img src="images/new/pulsar/rukava.jpg" alt="Рукава">
+            <p>Рукава</p>
+        </div>
+        <div class="complectation-card">
+            <img src="images/new/pulsar/gasitel.jpg" alt="Гаситель">
+            <p>Гаситель</p>
+        </div>
+        <div class="complectation-card">
+            <img src="images/new/pulsar/perrot.jpg" alt="Соединения">
+            <p>Соединения</p>
+        </div>
+    </section>
+
+    <h2 class="main-header">Устройство, принцип работы пневмонагнетателя Pulsar 530 D</h2>
+    <ul class="rent-options">
+        <li>Пневмонагнетатель состоит из дизельного компрессора и герметичного бункера-смесителя принудительного
+            действия, смонтированных на одноосном шасси с регулируемым прицепным дышлом.
+        </li>
+        <li>Дизельный пневмонагнетатель полностью автономен и не требует дополнительного электроподключения на
+            стройплощадке.
+        </li>
+        <li>В смеситель загружается готовый раствор или компоненты, в нем они смешиваются при помощи вращающихся лопаток
+            и разбавляются водой до необходимого состояния.
+        </li>
+        <li>Смеситель герметично закрывается и включается подача воздуха.
+        </li>
+        <li>Воздух подается внутрь смесителя для выталкивания раствора из смесителя, а также в магистраль подающих
+            рукавов для образования порций раствора и проталкивания их далее по рукавам к месту укладки.
+        </li>
+        <li>На конце магистрали присоединяется гаситель, который принимает в себя раствор, гасит его скорость и осаждает
+            в место укладки.
+        </li>
+        <li>По окончании раствора в смесителе, компрессор переключается в режим холостого хода и подача сжатого воздуха
+            прекращается. Крышка смесителя открывается, в смеситель загружается следующая порция раствора, и цикл подачи
+            повторяется.
+        </li>
+        <li><b>Чем больше производительность компрессора установки и выше рабочее давление, тем более широк спектр
+            подаваемых растворов, обеспечивается беспроблемная подача более крупных фракций раствора.</b>
+        </li>
+        <li><b>Чем более мощный компрессор, тем выше скорость (производительность), высота и дальность подачи без
+            образования пробок в подающих рукавах.</b>
+        </li>
+    </ul>
+
+    <h2 class="main-header">Информация для наших покупателей из России</h2>
+    <section style="margin-left: 3rem">
+        <p style="margin: -1rem 0 0.5rem 1.2rem"><b>Поставка оборудования в Российскую Федерацию осуществляется через
+            нашего
+            представителя ООО "ХОРС":</b></p>
+        <a id="address" class="with-icon" href="https://yandex.by/maps/-/CHeBIT1Z" target="blank">г. Рязань, Окружная
+            дорога 196 км., д.12</a><br>
+        <a id="website" class="with-icon" href="https://hors-tech.com" target="blank">www.hors-tech.com</a><br>
+        <p id="mail" class="with-icon">hors.rus@list.ru</p>
+        <p id="phone" class="with-icon">8 (800) 600-47-35</p>
+        <p id="person" class="with-icon">Требесов Андрей Николаевич</p>
+    </section>
 </main>
 <footer-component></footer-component>
 <script src="scripts/script.js"></script>

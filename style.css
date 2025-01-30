@@ -746,14 +746,14 @@ body {
     }
 }
 
-.pnevmo-rent-devices {
+.complectation {
     width: 70%;
     margin-left: 15%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 3rem;
 
-    .pnevmo-rent-card {
+    .complectation-card {
         display: flex;
         flex-direction: column;
         align-items: center;
