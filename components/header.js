@@ -43,7 +43,7 @@ class Header extends HTMLElement {
                             <li><a href="rent-peskostruy.html">Пескоструйное оборудование</a></li>
                         </ul>
                         </li>
-                    <li><a href="buy.html">Полезная информация</a></li>
+                    <li><a href="info.html">Полезная информация</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
