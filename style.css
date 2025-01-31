@@ -1,4 +1,4 @@
-body {
+body, main {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     margin: 0;
@@ -50,6 +50,7 @@ body {
 
 .phone {
     color: white;
+    text-decoration: none;
     &::before{
         content:url('images/head/phone-icon.png');
         position: relative;
@@ -72,6 +73,7 @@ body {
 .email {
     top: 47px;
     color: white;
+    text-decoration: none;
     &::before{
         content:url('images/head/email-icon.png');
         position: relative;
@@ -386,10 +388,13 @@ body {
 
         li {
             list-style: none;
-            color: #fff;
             padding: 0;
             display: grid;
             grid-template-rows: auto auto;
+
+            a {
+                color: #fff;
+            }
 
             &.phones {
                 grid-template-rows: 1fr 2fr;
@@ -922,6 +927,19 @@ body {
 
     &.active {
         background-color: #333;
+    }
+}
+
+.with-icon {
+    text-decoration: none;
+    margin: 0;
+
+    &::before {
+        position: relative;
+        left: -10px;
+        top: 5px;
+        width: 15px;
+        height: 15px;
     }
 }
 

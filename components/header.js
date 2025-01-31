@@ -12,8 +12,8 @@ class Header extends HTMLElement {
                 <a class="head-image" href="index.html">
                     <img src="images/head/head.png" alt="Логотип компании"/>
                 </a>
-                <div class="phone">+375 (17) 272-27-39</div>
-                <div class="email">info@mirostat.by</div>
+                <a class="phone" href="tel:+375172722739">+375 (17) 272-27-39</a>
+                <a class="email" href="mailto:info@mirostat.by">info@mirostat.by</a>
                 <a class="address" href="https://yandex.by/maps/-/CHEIE05j" target="blank">Минск, ул.Радиальная,
                     11Б/1,
                     помещение №4</a>
@@ -44,7 +44,7 @@ class Header extends HTMLElement {
                         </ul>
                         </li>
                     <li><a href="info.html">Полезная информация</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </header>

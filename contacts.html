@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ООО "Миростат"</title>
+    <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
+    <script src="components/header.js" type="text/javascript"></script>
+    <script src="components/footer.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        main {
+            margin: 0 2rem;
+        }
+
+        h3, h4 {
+            color: #003366;
+        }
+
+        h4 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .unordered {
+            margin: 0.2rem;
+        }
+
+        .info-header::before {
+            content: "✔";
+            color: chartreuse;
+            padding-right: 0.5rem;
+        }
+
+        .phones {
+            margin-top: 0;
+            margin-left: 1rem;
+            margin-bottom: 0;
+            text-decoration: none;
+        }
+
+        .phones a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .with-icon {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .phones-header::before {
+            content: url('images/new/pulsar/phone.png');
+        }
+
+        .mail-header::before {
+            content: url('images/new/pulsar/mail.png');
+        }
+
+        .address-header::before {
+            content: url('images/new/pulsar/address.png');
+        }
+
+        .route-header::before {
+            content: url('images/new/pulsar/route.png');
+        }
+    </style>
+</head>
+
+<body>
+<header-component></header-component>
+<main>
+    <h1 class="main-header">О компании</h1>
+    <p style="text-align: justify">
+        <b>ООО "Миростат"</b> специализируется на поставках строительно-отделочных машин и оборудования, средств малой
+        механизации, инструмента, другой продукции промышленного назначения.<br>
+        Работниками предприятия проведена работа по заключению дилерских договоров с поставщиками оборудования, что
+        позволяет формировать для Вас низкие цены, обеспечивать гарантийное обслуживание и своевременную поставку
+        запасных частей.
+    </p>
+    <p>
+        В 2010г. освоено и успешно развивается направление аренды строительного оборудования, а также создан участок по
+        ремонту и обслуживанию строительного оборудования в г. Минск.
+        С момента образования Таможенного Союза мы осуществляем поставки оборудования на территорию России, Казахстана,
+        Армении. Наши низкие цены и отсутствие таможенных барьеров делают это направление деятельности актуальным и
+        достаточно востребованным. Кроме того, учитывая многочисленные обращения строительных организаций частных форм
+        собственности, наше предложение содержит значительный перечень строительного оборудования, бывшего в
+        употреблении.
+    </p>
+
+    <p>При необходимости, предоставим контактную информацию о предприятиях, приобретавших нашу продукцию на территории
+        РБ и РФ, для согласования технических вопросов или для подтверждения нашего опыта поставок и обслуживания.
+    </p>
+
+    <h3 class="info-header">Мы готовы предложить Вам:</h3>
+    <ul class="unordered">
+        <li>Выгодные условия работы</li>
+        <li>Оперативные сроки поставки</li>
+        <li>Своевременную техническую поддержку</li>
+        <li>Доставку оборудования по территории РБ и РФ</li>
+    </ul>
+    <p>
+        По всем имеющимся у Вас вопросам мы всегда находимся в Вашем распоряжении!<br>
+        С уважением, коллектив ООО "Миростат"!
+    </p>
+
+    <h3 class="address-header with-icon">Наш адрес:</h3>
+    <a href="https://yandex.by/maps/-/CHEIE05j">220070,
+        Республика Беларусь, г.Минск
+        ул.Радиальная, 11Б/1, помещение №4</a>
+
+    <h3 class="phones-header with-icon">Телефоны:</h3>
+    <div class="phones">
+        <h4>Офис:</h4>
+        <ul class="unordered">
+            <li><a href="tel:+375172722739">+375 (17) 272-27-39</a></li>
+            <li><a href="tel:+375172724193">+375 (17) 242-41-93</a></li>
+        </ul>
+        <h4>Мобильные Беларусь:</h4>
+        <ul class="unordered">
+            <li><a href="tel:+375291889288">+375 (29) 188-92-88</a> (Viber, WhatsApp) - Подъёмники, аренда компрессоров
+            </li>
+            <li><a href="tel:+375293722013">+375 (29) 372-20-13</a> (Viber, WhatsApp) - Подъёмники, аренда компрессоров
+            </li>
+            <li><a href="tel:+375291688419">+375 (29) 168-84-19</a> (Viber, WhatsApp) - Растворонасосы,
+                пневмонагнетатели, компрессоры
+            </li>
+        </ul>
+        <h4>Мобильные РФ:</h4>
+        <ul class="unordered">
+            <li><a href="tel:+79296344653">+7 (929) 634-46-53</a> - Подъёмники</li>
+            <li><a href="tel:+79255470375">+7 (925) 547-03-75</a> - Растворонасосы, пневмонагнетатели, компрессоры</li>
+        </ul>
+    </div>
+
+    <h3 class="mail-header with-icon">Наша почта:</h3>
+    <a href="mailto:info@mirostat.by" style="text-decoration: none; color: black">
+        info@mirostat.by</a>
+
+    <h3 class="route-header with-icon">Как к нам добраться?</h3>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afeb64db2b841a264d69394c5fbc8b8b4aa085c7aa90f5bb0af3555a7febf89cf&amp;source=constructor"
+            width="600" height="400" frameborder="0"></iframe>
+</main>
+<footer-component></footer-component>
+<script src="scripts/script.js"></script>
+</body>
