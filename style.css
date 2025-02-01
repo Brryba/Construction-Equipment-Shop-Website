@@ -82,6 +82,10 @@ body, main {
     }
 }
 
+.menu-opener {
+    display: none;
+}
+
 .head-menu {
     z-index: 1000;
     &.fixed {

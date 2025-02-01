@@ -10,18 +10,19 @@ class Header extends HTMLElement {
             <div class="head-background"></div>
             <div class="head-banner">
                 <a class="head-image" href="index.html">
-                    <img src="images/head/head.png" alt="Логотип компании"/>
+                    <img src="images/head/head.png" alt="Логотип Миростат"/>
                 </a>
                 <a class="phone" href="tel:+375172722739">+375 (17) 272-27-39</a>
                 <a class="email" href="mailto:info@mirostat.by">info@mirostat.by</a>
                 <a class="address" href="https://yandex.by/maps/-/CHEIE05j" target="blank">Минск, ул.Радиальная,
                     11Б/1,
                     помещение №4</a>
+                <button class="menu-opener"></button>
             </div>
             <nav class="head-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a class="head-menu-caret">Новое оборудование</a>
+                    <li><a class="head-menu-caret">Новое оборудование<span class="after"></span></a>
                         <ul>
                             <li><a href="pulsar.html">Пневмонагнетатели</a></li>
                             <li><a href="new-compr.html">Компрессоры</a></li>
@@ -47,6 +48,9 @@ class Header extends HTMLElement {
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
         </header>
         `;
     }
