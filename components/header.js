@@ -17,7 +17,9 @@ class Header extends HTMLElement {
                 <a class="address" href="https://yandex.by/maps/-/CHEIE05j" target="blank">Минск, ул.Радиальная,
                     11Б/1,
                     помещение №4</a>
-                <button class="menu-opener"></button>
+                <button class="menu-opener">
+                    <img src="images/head/menu-icon.png" alt="Меню">
+                </button>
             </div>
             <nav class="head-menu">
                 <ul>

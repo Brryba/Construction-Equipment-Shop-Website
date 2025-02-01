@@ -87,6 +87,7 @@ body, main {
 }
 
 .head-menu {
+    display: block;
     z-index: 1000;
     &.fixed {
         position: fixed;

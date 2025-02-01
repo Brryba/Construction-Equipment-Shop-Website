@@ -1,11 +1,25 @@
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header {
-        .head-banner {
-            display: block;
+        .head-background {
+            max-height: 15vh;
+        }
 
-            .head-image img {
-                object-fit: contain;
-                max-height: 80px;
+        .head-banner {
+            display: grid;
+            grid-template-columns: 1fr 50px;
+            max-height: 15vh;
+
+            .head-image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    display: flex;
+                    object-fit: contain;
+                    max-height: 15vh;
+                }
             }
         }
 
@@ -17,14 +31,24 @@
     .head-menu {
         display: none;
     }
+    .head-menu ul a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
 }
 
 @media (max-width: 1024px) {
     .menu-opener {
         display: block;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
     }
 
     .head-menu {
+        display: none;
         position: absolute;
         right: 0;
         width: 100vw;

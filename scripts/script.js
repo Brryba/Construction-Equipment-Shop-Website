@@ -20,7 +20,7 @@ function mobileMenuOpenClose() {
     const button = document.getElementsByClassName("menu-opener")[0];
     const headMenu = document.getElementsByClassName('head-menu')[0];
     button.addEventListener('click', () => {
-        if (headMenu.style.display === "none") {
+        if (window.getComputedStyle(headMenu).display === "none") {
             headMenu.style.display = "block";
             document.body.style.overflow = 'hidden';
         } else {
