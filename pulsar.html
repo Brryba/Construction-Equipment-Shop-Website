@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО "Миростат"</title>
     <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
     <script src="components/header.js" type="text/javascript"></script>
     <script src="components/footer.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="mobile.css" rel="stylesheet" type="text/css"/>
     <style>
         #head-photos {
             display: flex;
@@ -54,7 +56,7 @@
                 grid-template-rows: 10vh 30vh;
                 width: 28vw;
                 height: 42vh;
-                margin: 1rem;
+                margin: 1rem 0;
                 padding: 1rem;
                 align-items: center;
                 justify-content: center;
@@ -115,10 +117,21 @@
         #person::before {
             content: url('images/new/pulsar/person.png');
         }
-    </style>
+        
+        @media (max-height: 768px) {
+            #head-photos {
+                margin: 0 3vw;
 
-    <script src="scripts/slider.js">
-    </script>
+                img {
+                    max-width: 47vw;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+        }
+    </style>
 </head>
 <body>
 <header-component></header-component>
@@ -133,9 +146,9 @@
     </div>
 
 
-    <b style="font-size:1.2rem; margin: 1rem">
+    <p><b style="font-size:1.2rem; margin: 1rem; text-align: justify">
         Представляем Вам новинку - отличное решение для механизации процесса укладки полусухой стяжки пола:
-    </b>
+    </b></p>
     <p style="margin: 1rem 1rem 0; text-align: justify">
         <b>Пневмонагнетатель Pulsar</b> применяется для подъёма на этажи цементно-песчаных растворов и легких бетонов,
         предназначенных для устройства стяжки пола. Пневмонагнетатель оборудован смесителем принудительного действия, в
@@ -147,57 +160,59 @@
 
     <h1 class="main-header">Технические характеристики пневмонагнетателя Pulsar 530 D</h1>
 
-    <table valign="center" class="table rounded-bottom">
-        <thead>
-        <tr>
-            <th>Название</th>
-            <th><b>Значение</b></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Производительность по подаче раствора</td>
-            <td>до 4,5 м³/ч</td>
-        </tr>
+    <div class="table-wrapper">
+        <table valign="center" class="table rounded-bottom">
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th><b>Значение</b></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Производительность по подаче раствора</td>
+                <td>до 4,5 м³/ч</td>
+            </tr>
 
-        <tr>
-            <td>Высота / длина подачи</td>
-            <td>до 80 метров / до 160 метров</td>
-        </tr>
-        <tr>
-            <td>Рабочее давление компрессора</td>
-            <td>8,0 атм</td>
-        </tr>
-        <tr>
-            <td>Производительность компрессора</td>
-            <td>5,2 м³/мин</td>
-        </tr>
-        <tr>
-            <td>Максимальная крупность фракции</td>
-            <td>16 мм</td>
-        </tr>
-        <tr>
-            <td>Объём бункера-смесителя геометрический</td>
-            <td>300 л</td>
-        </tr>
-        <tr>
-            <td>Объём бункера-смесителя по раствору</td>
-            <td>250 л</td>
-        </tr>
-        <tr>
-            <td>Диаметр подающего рукава</td>
-            <td>65 мм</td>
-        </tr>
-        <tr>
-            <td>Двигатель дизельный</td>
-            <td>41 кВт, 4 цил., атмосферный, с жидкостным охлаждением</td>
-        </tr>
-        <tr>
-            <td>Исполнение</td>
-            <td>Передвижной, на одноосном шасси с регулируемым по высоте дышлом</td>
-        </tr>
-        </tbody>
-    </table>
+            <tr>
+                <td>Высота / длина подачи</td>
+                <td>до 80 метров / до 160 метров</td>
+            </tr>
+            <tr>
+                <td>Рабочее давление компрессора</td>
+                <td>8,0 атм</td>
+            </tr>
+            <tr>
+                <td>Производительность компрессора</td>
+                <td>5,2 м³/мин</td>
+            </tr>
+            <tr>
+                <td>Максимальная крупность фракции</td>
+                <td>16 мм</td>
+            </tr>
+            <tr>
+                <td>Объём бункера-смесителя геометрический</td>
+                <td>300 л</td>
+            </tr>
+            <tr>
+                <td>Объём бункера-смесителя по раствору</td>
+                <td>250 л</td>
+            </tr>
+            <tr>
+                <td>Диаметр подающего рукава</td>
+                <td>65 мм</td>
+            </tr>
+            <tr>
+                <td>Двигатель дизельный</td>
+                <td>41 кВт, 4 цил., атмосферный, с жидкостным охлаждением</td>
+            </tr>
+            <tr>
+                <td>Исполнение</td>
+                <td>Передвижной, на одноосном шасси с регулируемым по высоте дышлом</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div style="display: flex; justify-content: space-around; margin-bottom: 1rem; color: #003366">
         <p style="text-align: center"><b>Цена для РБ:<br>98 000,00 бел. руб. + НДС.</b></p>
@@ -400,5 +415,6 @@
 </main>
 <footer-component></footer-component>
 <script src="scripts/script.js"></script>
+<script src="scripts/slider.js"></script>
 </body>
 </html>

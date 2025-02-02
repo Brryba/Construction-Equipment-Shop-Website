@@ -125,7 +125,6 @@ productCards.forEach(card => {
     }
 
     function parseVideo(link) {
-        console.log(link);
         if (link === undefined || link === null) {
             return <div></div>;
         }

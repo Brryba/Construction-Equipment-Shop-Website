@@ -418,4 +418,9 @@
             }
         }
     }
+
+    .slideshow-container {
+        min-width: 65vw;
+        margin: 0 17.5vw;
+    }
 }
