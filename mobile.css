@@ -1,13 +1,21 @@
 @media (max-width: 600px) {
+
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 10vh;
+    }
+
     header {
         .head-background {
-            max-height: 15vh;
+            max-height: 10vh;
         }
 
         .head-banner {
             display: grid;
             grid-template-columns: 1fr 50px;
-            max-height: 15vh;
+            max-height: 10vh;
 
             .head-image {
                 width: 100%;
@@ -18,44 +26,49 @@
                 img {
                     display: flex;
                     object-fit: contain;
-                    max-height: 15vh;
+                    max-height: 10vh;
                 }
             }
+        }
+
+        .head-menu {
+            top: 10vh;
         }
 
         .phone, .address, .email {
             display: none;
         }
     }
-
-    .head-menu {
-        display: none;
-    }
-    .head-menu ul a {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-
 }
 
 @media (max-width: 1024px) {
+    .head-banner, .head-background {
+        position: fixed;
+        top: 0;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
     .menu-opener {
         display: block;
         background-color: rgba(0, 0, 0, 0);
         border: none;
+        margin-top: 2vh;
     }
 
     .head-menu {
-        display: none;
+        visibility: hidden;
         position: absolute;
-        right: 0;
+        top: 95px;
+        right: 100vw;
         width: 100vw;
         min-height: 80%;
         max-height: 80%;
         background-color: #dff3ff;
         overflow: auto;
+        transition: transform 0.5s ease-out;
 
         ul {
             display: flex;
@@ -85,6 +98,7 @@
                 font-size: 1.2rem;
                 padding: 10px;
                 text-align: left;
+                position: relative;
             }
 
             ul {
@@ -103,5 +117,8 @@
             }
         }
 
+        &.opened {
+            transform: translateX(100vw);
+        }
     }
 }
