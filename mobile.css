@@ -77,11 +77,25 @@
     .equipment-card {
         border: none !important;
     }
+
+    .product-card {
+        width: 100% !important;
+
+        .photo {
+            img {
+                max-width: 100% !important;
+            }
+        }
+
+        .product-card-container .content .text {
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 12vh !important;
+        padding-top: 8vh !important;
     }
 
     header {
@@ -178,6 +192,16 @@
     .rent-lifter-card {
         margin: 2rem 5% 1rem 5% !important;
     }
+
+    .product-card-container {
+        img {
+            min-width: 90% !important;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -225,6 +249,10 @@
                 object-fit: contain;
             }
         }
+    }
+
+    .product-card-container img {
+        max-width: 80% !important;
     }
 }
 
@@ -319,5 +347,41 @@
     .main-menu {
         margin: 1% 0;
         width: 100%;
+    }
+
+    .product-card-container {
+        &>.content {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            .photo {
+                display: flex;
+                align-items: center;
+
+                img {
+                    max-width: 70%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .modal {
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        top: 10%;
+        border-radius: 2% 2% 0 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh auto 1fr;
+
+        .image-slider {
+            margin-top: 2rem;
+
+            img {
+                max-height: 100% !important;
+            }
+        }
     }
 }
