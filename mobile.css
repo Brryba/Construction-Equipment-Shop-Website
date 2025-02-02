@@ -93,6 +93,7 @@
     }
 
     .modal {
+        top: 5vh !important;
         grid-template-rows: 40vh auto 1fr !important;
 
         .image-slider img {
