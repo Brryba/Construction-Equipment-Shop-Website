@@ -91,6 +91,14 @@
             align-items: center;
         }
     }
+
+    .modal {
+        grid-template-rows: 40vh auto 1fr !important;
+
+        .image-slider img {
+            max-height: 35vh !important;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -232,7 +240,6 @@
     }
 
     .rent-lifter-card {
-
         section {
             display: flex;
             flex-direction: column;
@@ -371,16 +378,42 @@
         left: 0;
         right: 0;
         bottom: -5px;
-        top: 10%;
+        top: 10vh;
         border-radius: 2% 2% 0 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 50vh auto 1fr;
+        grid-template-rows: 55vh auto 1fr;
 
         .image-slider {
             margin-top: 2rem;
 
             img {
-                max-height: 100% !important;
+                max-height: 50vh;
+                border-radius: 5% !important;
+            }
+        }
+
+        .closer {
+            position: absolute;
+            top: 0;
+            right: 1vh;
+
+            img {
+                position: relative;
+                object-fit: fill;
+                width: 3vh;
+                height: 3vh;
+            }
+        }
+
+        .move-buttons-container {
+            opacity: 1 !important;
+
+            .move-buttons {
+                opacity: 1;
+
+                &:hover {
+                    scale: none;
+                }
             }
         }
     }

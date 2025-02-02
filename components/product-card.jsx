@@ -84,7 +84,7 @@ function ProductCard(props) {
                             </div>
                             <h3>Цена: {props.price}</h3>
                         </div>
-                        <span onClick={handleCloseModal}>
+                        <span onClick={handleCloseModal} className="closer">
                             <img src="images/bu/main/close.png" alt="Close" className="close-icon"/>
                         </span>
                     </div>
