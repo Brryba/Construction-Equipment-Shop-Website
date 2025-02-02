@@ -1,10 +1,37 @@
 @media (max-width: 600px) {
 
+    .head-background, .head-banner {
+        height: 8vh;
+    }
+
+    .head-image {
+        max-height: 8vh;
+    }
+
+    .menu-card {
+        width: 70%;
+        margin-bottom: 2rem !important;
+    }
+
+    .page-footer > ul {
+        padding: 2%;
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+
+        li {
+            margin: 3%;
+            grid-row: 1;
+        }
+
+        a, h3 {
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 10vh;
+        padding-top: 12vh !important;
     }
 
     header {
@@ -38,6 +65,12 @@
         .phone, .address, .email {
             display: none;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-card {
+        margin: 2%;
     }
 }
 
@@ -85,7 +118,7 @@
 
                 &:hover ul {
                     a {
-                        margin-left: 7vw;
+                        margin-left: 10vw;
                     }
                     display: block;
                     position: static;
@@ -111,7 +144,7 @@
 
                     a {
                         text-decoration: none;
-                        margin-left: 7vw;
+                        margin-left: 10vw;
                     }
                 }
             }
@@ -120,5 +153,10 @@
         &.opened {
             transform: translateX(100vw);
         }
+    }
+
+    .main-menu {
+        margin: 1% 0%;
+        width: 100%;
     }
 }
