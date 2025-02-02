@@ -661,7 +661,6 @@ body, main {
 
     li {
         padding: 0.3rem 2% 0.3rem 0;
-        position: relative;
         text-align: justify;
     }
 
@@ -757,14 +756,14 @@ body, main {
     }
 }
 
-.complectation {
+.equipment {
     width: 70%;
     margin-left: 15%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 3rem;
 
-    .complectation-card {
+    .equipment-card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1056,6 +1055,11 @@ body, main {
 
     .photos {
         margin: 0;
+    }
+
+    .equipment {
+        margin-left: 10%;
+        width: 80%;
     }
 }
 

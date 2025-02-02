@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО "Миростат"</title>
     <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
     <script src="components/header.js" type="text/javascript"></script>
     <script src="components/footer.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="mobile.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 <header-component></header-component>
 <main>
     <h1 class="main-header">Аренда передвижных дизельных компрессоров</h1>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Наименование</th>
-            <th><b>Характеристики</b></th>
-            <th><b>Период аренды</b></th>
-            <th><b>Стоимость аренды без НДС</b></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="td-photo">
-                <div>
-                    <img src="images/rent/compressors/xas-77.jpg" alt="">
-                    <b>Atlas Copco XAS77</b>
-                </div>
-            </td>
-            <td class="characteristics">Тип: прицепной<br>
-                Производительность: 4,2м3/мин<br>
-                Давление - 7,0 бар<br>
-                Двигатель - дизель, 31,5kW<br>
-                Вес - 1060кг<br>
-            </td>
-            <td>От 3 рабочих дней</td>
-            <td>От 75 руб./сутки</td>
-        </tr>
-        <tr>
-            <td class="td-photo">
-                <div>
-                    <img src="images/rent/compressors/xas-97.jpg" alt="">
-                    <b>Atlas Copco XAS97</b>
-                </div>
-            </td>
-            <td class="characteristics">Тип: прицепной<br>
-                Производительность: 5,3м3/мин<br>
-                Давление - 7,0 бар<br>
-                Двигатель - дизель, 36kW<br>
-                Вес - 1060кг<br>
-            </td>
-            <td>От 3 рабочих дней</td>
-            <td>От 90 руб./сутки</td>
-        </tr>
-        <tr>
-            <td class="td-photo">
-                <div>
-                    <img src="images/rent/compressors/MR-10.jpg" alt="">
-                    <b>МИРОСТАТ MR-10/10</b>
-                </div>
-            </td>
-            <td class="characteristics">Тип: стационарный<br>
-                Производительность: 10,0м3/мин<br>
-                Давление - 10,0 бар<br>
-                Двигатель - дизель, 88kW<br>
-                Вес - 1650кг<br>
-            </td>
-            <td>От 5 рабочих дней</td>
-            <td>От 120 руб./сутки</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td colspan="100"></td>
-        </tr>
-        </tfoot>
-    </table>
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Наименование</th>
+                <th><b>Характеристики</b></th>
+                <th><b>Период аренды</b></th>
+                <th><b>Стоимость аренды без НДС</b></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="td-photo">
+                    <div>
+                        <img src="images/rent/compressors/xas-77.jpg" alt="">
+                        <b>Atlas Copco XAS77</b>
+                    </div>
+                </td>
+                <td class="characteristics">Тип: прицепной<br>
+                    Производительность: 4,2м3/мин<br>
+                    Давление - 7,0 бар<br>
+                    Двигатель - дизель, 31,5kW<br>
+                    Вес - 1060кг<br>
+                </td>
+                <td>От 3 рабочих дней</td>
+                <td>От 75 руб./сутки</td>
+            </tr>
+            <tr>
+                <td class="td-photo">
+                    <div>
+                        <img src="images/rent/compressors/xas-97.jpg" alt="">
+                        <b>Atlas Copco XAS97</b>
+                    </div>
+                </td>
+                <td class="characteristics">Тип: прицепной<br>
+                    Производительность: 5,3м3/мин<br>
+                    Давление - 7,0 бар<br>
+                    Двигатель - дизель, 36kW<br>
+                    Вес - 1060кг<br>
+                </td>
+                <td>От 3 рабочих дней</td>
+                <td>От 90 руб./сутки</td>
+            </tr>
+            <tr>
+                <td class="td-photo">
+                    <div>
+                        <img src="images/rent/compressors/MR-10.jpg" alt="">
+                        <b>МИРОСТАТ MR-10/10</b>
+                    </div>
+                </td>
+                <td class="characteristics">Тип: стационарный<br>
+                    Производительность: 10,0м3/мин<br>
+                    Давление - 10,0 бар<br>
+                    Двигатель - дизель, 88kW<br>
+                    Вес - 1650кг<br>
+                </td>
+                <td>От 5 рабочих дней</td>
+                <td>От 120 руб./сутки</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="100"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
     <ul class="unordered">
         <li>Предлагаем в аренду передвижные дизельные компрессоры c производительностью 4,2 - 10,0 м3/мин и рабочим
             давлением до 10атм.

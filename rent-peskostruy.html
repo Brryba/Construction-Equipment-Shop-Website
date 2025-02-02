@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО "Миростат"</title>
     <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
     <script src="components/header.js" type="text/javascript"></script>
     <script src="components/footer.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="mobile.css" rel="stylesheet" type="text/css"/>
     <style>
         #page-header {
             display: flex;
@@ -19,6 +21,25 @@
 
             img {
                 width: 20vw;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #page-header {
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem 2% 3rem;
+
+                img {
+                    width: 50vw;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            #page-header {
+                margin: 0 0 1rem;
             }
         }
     </style>
@@ -31,37 +52,39 @@
         <h1 class="main-header">Аренда пескоструйных аппаратов</h1>
         <img src="images/rent/main/peskostruy.png" alt="Пескоструйный аппарат">
     </div>
-    <table valign="center" class="table rounded-bottom">
-        <thead>
-        <tr>
-            <th>Наименование</th>
-            <th><b>Период аренды</b></th>
-            <th><b>Стоимость аренды без НДС</b></th>
-            <th><b>Примечания</b></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Пескоструйный аппарат Contracor DBS200</td>
-            <td>От 5 рабочих дней</td>
-            <td>От 70 рублей / сутки</td>
-            <td>По всей территории РБ</td>
-        </tr>
+    <div class="table-wrapper">
+        <table valign="center" class="table">
+            <thead>
+            <tr>
+                <th>Наименование</th>
+                <th><b>Период аренды</b></th>
+                <th><b>Стоимость аренды без НДС</b></th>
+                <th><b>Примечания</b></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Пескоструйный аппарат Contracor DBS200</td>
+                <td>От 5 рабочих дней</td>
+                <td>От 70 рублей / сутки</td>
+                <td>По всей территории РБ</td>
+            </tr>
 
-        <tr>
-            <td>Пескоструйный аппарат + компрессор 5.3 м³/мин</td>
-            <td>От 5 рабочих дней</td>
-            <td>От 160 рублей / сутки</td>
-            <td>По всей территории РБ</td>
-        </tr>
-        <tr>
-            <td>Пескоструйный аппарат + компрессор 10.0 м³/мин</td>
-            <td>От 5 рабочих дней</td>
-            <td>От 220 рублей / сутки</td>
-            <td>По всей территории РБ</td>
-        </tr>
-        </tbody>
-    </table>
+            <tr>
+                <td>Пескоструйный аппарат + компрессор 5.3 м³/мин</td>
+                <td>От 5 рабочих дней</td>
+                <td>От 160 рублей / сутки</td>
+                <td>По всей территории РБ</td>
+            </tr>
+            <tr>
+                <td>Пескоструйный аппарат + компрессор 10.0 м³/мин</td>
+                <td>От 5 рабочих дней</td>
+                <td>От 220 рублей / сутки</td>
+                <td>По всей территории РБ</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <ul class="unordered">
         <li><b>Возможны скидки при аренде на длительный срок.</b></li>
         <li>Пескоструйная обработка – это высокоэффективный метод очистки различных поверхностей при помощи песка или

@@ -5,7 +5,7 @@
     }
 
     .head-image img {
-        max-height: 8vh !important;
+        max-height: 6vh !important;
     }
 
     .menu-opener {
@@ -40,6 +40,25 @@
         }
     }
 
+    .unordered {
+        padding-left: 1.2rem !important;
+
+        li::marker {
+            position: relative;
+            left: 115px;
+        }
+    }
+
+    .photos {
+        margin: 0 2vw;
+        justify-content: space-between;
+        column-gap: 2vw;
+
+        img, .vertical {
+            width: 30%;
+        }
+    }
+
     .rent-type-card {
         width: 80vw !important;
         height: 80vw !important;
@@ -53,6 +72,10 @@
         h2 {
             font-size: 1.5rem !important;
         }
+    }
+
+    .equipment-card {
+        border: none !important;
     }
 }
 
@@ -108,6 +131,53 @@
         margin: 0 1.5rem 1.5rem !important;
         font-size: 1.2rem;
     }
+
+    .main-header {
+        margin: 2rem 0;
+    }
+
+    .unordered {
+        padding-left: 1.5rem;
+
+        li {
+            padding: 0.3rem 4% 0.3rem 0;
+        }
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        width: 98vw;
+
+        .table {
+        }
+
+        .td-photo {
+
+            img {
+                max-width: 12em !important;
+            }
+        }
+
+        .characteristics {
+            padding-left: 0.5rem;
+        }
+    }
+
+    .photos .vertical {
+        width: 25%;
+    }
+
+    .equipment-card {
+        width: 23vw;
+
+        img {
+            max-width: 23vw;
+        }
+    }
+
+    .rent-lifter-card {
+        margin: 2rem 5% 1rem 5% !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -122,6 +192,37 @@
         .rent-type-card {
             width: 45vw;
             height: 45vw;
+        }
+    }
+
+    .equipment {
+        margin-left: 2% !important;
+        width: 96% !important;
+
+        .equipment-card {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .rent-lifter-card {
+
+        section {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin-top: 0;
+            }
+
+            .features {
+                align-items: flex-start;
+            }
+
+            img {
+                object-fit: contain;
+            }
         }
     }
 }
@@ -208,8 +309,13 @@
         }
     }
 
+    .equipment {
+        margin-left: 5%;
+        width: 90%;
+    }
+
     .main-menu {
-        margin: 1% 0%;
+        margin: 1% 0;
         width: 100%;
     }
 }
