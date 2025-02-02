@@ -29,6 +29,24 @@ function mobileMenuOpenClose() {
         }
         headMenu.classList.toggle('opened');
     })
+
+    function hideMenuOnScroll() {
+        let prev = window.scrollY;
+        const headBanner = document.getElementsByClassName("head-banner")[0];
+        const headBackground = document.getElementsByClassName("head-background")[0];
+        window.addEventListener('scroll', () => {
+            let scrolled = window.scrollY;
+            if (scrolled > prev && scrolled > 100) {
+                headBanner.style.visibility = "hidden";
+                headBackground.style.visibility = "hidden";
+            } else if (scrolled < 100) {
+                headBanner.style.visibility = "visible";
+                headBackground.style.visibility = "visible";
+            }
+            prev = scrolled;
+        })
+    }
+    hideMenuOnScroll();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
