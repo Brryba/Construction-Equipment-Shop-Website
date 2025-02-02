@@ -4,7 +4,7 @@ function pinMenu() {
         const head_menu = document.getElementsByClassName("head-menu")[0];
         const head_banner = document.getElementsByClassName("head-banner")[0];
         const modal = document.getElementsByClassName("head-banner");
-        if (window.scrollY >= head_banner.offsetHeight || window.scrollY >= modal.offsetHeight) {
+        if (window.innerWidth > 1024 && window.scrollY >= head_banner.offsetHeight) {
             head_menu.classList.add("fixed");
             document.body.style.marginTop = `${head_menu.offsetHeight}px`;
         } else {

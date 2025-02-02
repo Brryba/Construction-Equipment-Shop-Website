@@ -9,13 +9,13 @@
 
     header {
         .head-background {
-            max-height: 10vh;
+            height: 10vh;
         }
 
         .head-banner {
             display: grid;
             grid-template-columns: 1fr 50px;
-            max-height: 10vh;
+            height: 10vh;
 
             .head-image {
                 width: 100%;
@@ -60,7 +60,7 @@
 
     .head-menu {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         top: 95px;
         right: 100vw;
         width: 100vw;
