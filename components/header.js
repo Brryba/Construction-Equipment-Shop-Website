@@ -24,7 +24,7 @@ class Header extends HTMLElement {
             <nav class="head-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a class="head-menu-caret">Новое оборудование<span class="after"></span></a>
+                    <li><a class="head-menu-caret" href="new.html">Новое оборудование<span class="after"></span></a>
                         <ul>
                             <li><a href="pulsar.html">Пневмонагнетатели</a></li>
                             <li><a href="new-compr.html">Компрессоры</a></li>
