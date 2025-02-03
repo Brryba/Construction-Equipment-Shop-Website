@@ -56,7 +56,7 @@
                 grid-template-rows: 10vh 30vh;
                 width: 28vw;
                 height: 42vh;
-                margin: 1rem 0;
+                margin: 1rem;
                 padding: 1rem;
                 align-items: center;
                 justify-content: center;
@@ -117,6 +117,57 @@
         #person::before {
             content: url('images/new/pulsar/person.png');
         }
+
+        #pop-up-button {
+            padding: 0;
+            z-index: 1111;
+            border: none;
+            background-color: white;
+            font-size: 1rem;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        #pop-up-background {
+            display: none;
+        }
+
+        #pop-up-background.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            background-color: rgba(0, 0, 0, 0.4);
+
+            #pop-up {
+                position: fixed;
+                margin: 5vh 5vw;
+                background-color: white;
+                overflow: auto;
+                border-radius: 2rem;
+
+                .close-icon {
+                    position: absolute;
+                    max-width: 20px;
+                    right: 1rem;
+                    top: 1rem;
+                    transition: 0.5s;
+
+                    &:hover {
+                        transform: rotate(90deg) scale(1.15);
+                    }
+                }
+
+                .unordered {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+        }
         
         @media (max-width: 900px) {
             #head-photos {
@@ -156,7 +207,51 @@
         сухие, полусухие и жидкие растворо-бетонные смеси с размером фракции твердых включений до 16 мм на высоту до 30
         этажей. Раствор подаётся по магистрали рукавов под давлением сжатого воздуха при помощи встроенного дизельного
         компрессора высокой производительности.
+        <button id="pop-up-button">Подробнее об устройстве и принципе работы</button>
     </p>
+    <div id="pop-up-background">
+        <div id="pop-up">
+            <img src="images/bu/main/close.png" alt="Close" class="close-icon"/>
+            <h2 class="main-header">Устройство, принцип работы пневмонагнетателя Pulsar 530 D</h2>
+            <ul class="unordered">
+                <li>Пневмонагнетатель состоит из дизельного компрессора и герметичного бункера-смесителя принудительного
+                    действия, смонтированных на одноосном шасси с регулируемым прицепным дышлом.
+                </li>
+                <li>Дизельный пневмонагнетатель полностью автономен и не требует дополнительного электроподключения на
+                    стройплощадке.
+                </li>
+                <li>В смеситель загружается готовый раствор или компоненты, в нем они смешиваются при помощи вращающихся
+                    лопаток
+                    и разбавляются водой до необходимого состояния.
+                </li>
+                <li>Смеситель герметично закрывается и включается подача воздуха.
+                </li>
+                <li>Воздух подается внутрь смесителя для выталкивания раствора из смесителя, а также в магистраль
+                    подающих
+                    рукавов для образования порций раствора и проталкивания их далее по рукавам к месту укладки.
+                </li>
+                <li>На конце магистрали присоединяется гаситель, который принимает в себя раствор, гасит его скорость и
+                    осаждает
+                    в место укладки.
+                </li>
+                <li>По окончании раствора в смесителе, компрессор переключается в режим холостого хода и подача сжатого
+                    воздуха
+                    прекращается. Крышка смесителя открывается, в смеситель загружается следующая порция раствора, и
+                    цикл
+                    подачи
+                    повторяется.
+                </li>
+                <li><b>Чем больше производительность компрессора установки и выше рабочее давление, тем более широк
+                    спектр
+                    подаваемых растворов, обеспечивается беспроблемная подача более крупных фракций раствора.</b>
+                </li>
+                <li><b>Чем более мощный компрессор, тем выше скорость (производительность), высота и дальность подачи
+                    без
+                    образования пробок в подающих рукавах.</b>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <h1 class="main-header">Технические характеристики пневмонагнетателя Pulsar 530 D</h1>
 
@@ -354,51 +449,20 @@
     </div>
 
     <h2 class="main-header">Комплектующие для пневмонагнетателя</h2>
-    <section class="complectation">
-        <div class="complectation-card">
+    <section class="equipment">
+        <div class="equipment-card">
             <img src="images/new/pulsar/rukava.jpg" alt="Рукава">
             <p>Рукава</p>
         </div>
-        <div class="complectation-card">
+        <div class="equipment-card">
             <img src="images/new/pulsar/gasitel.jpg" alt="Гаситель">
             <p>Гаситель</p>
         </div>
-        <div class="complectation-card">
+        <div class="equipment-card">
             <img src="images/new/pulsar/perrot.jpg" alt="Соединения">
             <p>Соединения</p>
         </div>
     </section>
-
-    <h2 class="main-header">Устройство, принцип работы пневмонагнетателя Pulsar 530 D</h2>
-    <ul class="unordered">
-        <li>Пневмонагнетатель состоит из дизельного компрессора и герметичного бункера-смесителя принудительного
-            действия, смонтированных на одноосном шасси с регулируемым прицепным дышлом.
-        </li>
-        <li>Дизельный пневмонагнетатель полностью автономен и не требует дополнительного электроподключения на
-            стройплощадке.
-        </li>
-        <li>В смеситель загружается готовый раствор или компоненты, в нем они смешиваются при помощи вращающихся лопаток
-            и разбавляются водой до необходимого состояния.
-        </li>
-        <li>Смеситель герметично закрывается и включается подача воздуха.
-        </li>
-        <li>Воздух подается внутрь смесителя для выталкивания раствора из смесителя, а также в магистраль подающих
-            рукавов для образования порций раствора и проталкивания их далее по рукавам к месту укладки.
-        </li>
-        <li>На конце магистрали присоединяется гаситель, который принимает в себя раствор, гасит его скорость и осаждает
-            в место укладки.
-        </li>
-        <li>По окончании раствора в смесителе, компрессор переключается в режим холостого хода и подача сжатого воздуха
-            прекращается. Крышка смесителя открывается, в смеситель загружается следующая порция раствора, и цикл подачи
-            повторяется.
-        </li>
-        <li><b>Чем больше производительность компрессора установки и выше рабочее давление, тем более широк спектр
-            подаваемых растворов, обеспечивается беспроблемная подача более крупных фракций раствора.</b>
-        </li>
-        <li><b>Чем более мощный компрессор, тем выше скорость (производительность), высота и дальность подачи без
-            образования пробок в подающих рукавах.</b>
-        </li>
-    </ul>
 
     <h2 class="main-header">Информация для наших покупателей из России</h2>
     <section style="margin-left: 3rem">
@@ -414,6 +478,30 @@
     </section>
 </main>
 <footer-component></footer-component>
+<script>
+    const popUpBackground = document.getElementById('pop-up-background');
+    const popUp = document.getElementById('pop-up')
+    const popUpButton = document.getElementById('pop-up-button');
+    const closeIcon = document.getElementsByClassName('close-icon')[0];
+
+    popUpButton.addEventListener('click', () => {
+        popUpBackground.classList.toggle('active');
+        document.body.style.overflow = (popUpBackground.classList.contains('active') ? 'hidden' : 'auto');
+    })
+
+    function close() {
+        popUpBackground.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    popUpBackground.addEventListener('click', close);
+    closeIcon.addEventListener('click', close);
+
+    popUp.addEventListener('click', (event) => {
+        if (event.target !== closeIcon)
+            event.stopPropagation();
+    })
+</script>
 <script src="scripts/script.js"></script>
 <script src="scripts/slider.js"></script>
 </body>
