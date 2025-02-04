@@ -98,6 +98,11 @@
             }
         }
 
+        .equipment {
+            margin: 0 2vw;
+            width: 96vw;
+        }
+
         #address::before {
             content: url('images/new/pulsar/address.png');
         }
@@ -168,7 +173,34 @@
                 }
             }
         }
-        
+
+        @media (max-width: 1260px) {
+            #advantages-photos {
+                .adv-with-photo {
+                    width: 27vw;
+
+                    img {
+                        max-width: 27vw;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            #advantages-photos {
+                grid-template-columns: 1fr 1fr;
+
+                .adv-with-photo {
+                    width: 40vw;
+                    height: 50vh;
+
+                    img {
+                        min-width: 40vw;
+                    }
+                }
+            }
+        }
+
         @media (max-width: 900px) {
             #head-photos {
                 margin: 0 3vw;
@@ -177,10 +209,27 @@
                     max-width: 47vw;
                 }
             }
+
+            .adv-with-photo {
+                max-height: 40vh;
+            }
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 600px) {
+            #advantages-photos {
+                grid-template-columns: 1fr;
+            }
 
+            .adv-with-photo {
+                min-width: 80vw;
+                min-height: auto !important;
+
+                img {
+                    max-height: 70% !important;
+                    min-width: 80vw !important;
+                    object-fit: contain;
+                }
+            }
         }
     </style>
 </head>
