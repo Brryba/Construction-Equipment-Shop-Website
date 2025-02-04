@@ -1,0 +1,212 @@
+#head-photos {
+    display: flex;
+    margin: 0 10vw;
+
+    img {
+        max-width: 40vw;
+    }
+}
+
+.table {
+    margin-bottom: 1rem;
+}
+
+.table th {
+    width: 50%;
+}
+
+#advantages {
+    list-style-type: none;
+    padding: 0 0 0 1vw;
+
+    li h3::before {
+        content: "✔";
+        color: chartreuse;
+        padding-right: 0.5rem;
+    }
+
+    li h3 {
+        color: darkgreen;
+        margin: 5px 0;
+    }
+
+    li p {
+        margin: 10px 1vw;
+    }
+}
+
+#advantages-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .adv-with-photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28vw;
+        margin: 1rem;
+        padding: 1rem;
+        align-items: center;
+        position: relative;
+
+        border: 2px black solid;
+        border-radius: 10px;
+
+        img {
+            bottom: 1rem;
+            left: 1rem;
+            width: 100%;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 0;
+            height: 5vh;
+        }
+
+        p {
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            margin: 1rem;
+            padding: 0.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            line-height: 1.5rem;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        &:hover p {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.equipment {
+    margin: 0 2vw;
+    width: 96vw;
+}
+
+#address::before {
+    content: url('../images/new/pulsar/address.png');
+}
+
+#website::before {
+    content: url('../images/new/pulsar/website.png');
+}
+
+#phone::before {
+    content: url('../images/new/pulsar/phone.png');
+}
+
+#mail::before {
+    content: url('../images/new/pulsar/mail.png');
+}
+
+#person::before {
+    content: url('../images/new/pulsar/person.png');
+}
+
+#pop-up-button {
+    padding: 0;
+    z-index: 1111;
+    border: none;
+    background-color: white;
+    font-size: 1rem;
+    color: #003366;
+    font-weight: bold;
+}
+
+#pop-up-background {
+    display: none;
+}
+
+#pop-up-background.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 111111;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    #pop-up {
+        position: fixed;
+        margin: 5vh 5vw;
+        background-color: white;
+        overflow: auto;
+        border-radius: 2rem;
+
+        .close-icon {
+            position: absolute;
+            max-width: 20px;
+            right: 1rem;
+            top: 1rem;
+            transition: 0.5s;
+
+            &:hover {
+                transform: rotate(90deg) scale(1.15);
+            }
+        }
+
+        .unordered {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    #advantages-photos {
+        .adv-with-photo {
+            width: 26vw;
+
+            img {
+                max-width: 26vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #advantages-photos {
+        grid-template-columns: 1fr 1fr;
+
+        .adv-with-photo {
+            width: 40vw;
+
+            img {
+                min-width: 40vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #head-photos {
+        margin: 0 3vw;
+
+        img {
+            max-width: 47vw;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #advantages-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .adv-with-photo {
+        min-width: 86vw;
+
+        img {
+            min-width: 86vw !important;
+        }
+    }
+}

@@ -10,7 +10,7 @@ class Header extends HTMLElement {
             <div class="head-background"></div>
             <div class="head-banner">
                 <a class="head-image" href="index.html">
-                    <img src="/images/head/head.png" alt="Логотип Миростат"/>
+                    <img src="images/head/head.png" alt="Логотип Миростат"/>
                 </a>
                 <a class="phone" href="tel:+375172722739">+375 (17) 272-27-39</a>
                 <a class="email" href="mailto:info@mirostat.by">info@mirostat.by</a>
