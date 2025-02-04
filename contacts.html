@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО "Миростат"</title>
     <link rel="icon" type="image/x-icon" href="/images/head/favicon.png">
     <script src="components/header.js" type="text/javascript"></script>
     <script src="components/footer.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="mobile.css" rel="stylesheet" type="text/css"/>
     <style>
         main {
-            margin: 0 2rem;
+            margin: 0 1rem;
         }
 
         h3, h4 {
@@ -65,6 +67,30 @@
 
         .route-header::before {
             content: url('images/new/pulsar/route.png');
+        }
+
+        .map {
+            width: 100%;
+
+            &.mobile {
+                display: none;
+            }
+
+            &.desktop {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .map {
+                &.desktop {
+                    display: none;
+                }
+
+                &.mobile {
+                    display: block;
+                }
+            }
         }
     </style>
 </head>
@@ -140,8 +166,12 @@
         info@mirostat.by</a>
 
     <h3 class="route-header with-icon">Как к нам добраться?</h3>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acd0bf6a88f278a78bcaa98a00cae37a1fd63ad67a85878a1f1bada239ea9e4c1&amp;source=constructor"
-            width="814" height="400" frameborder="0"></iframe>
+    <iframe class="map desktop"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a94cdb72f6d7a82400d531a3c06948c7f5d6586c7b796131b18256750ac285f&amp;source=constructor"
+            width="800" height="400" frameborder="0"></iframe>
+    <iframe class="map mobile"
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8ba1c684ebd66bf1a99bc8ab73fd22e2d388f9f44b1f762b7a2285e72dd58aa4&amp;source=constructor"
+            width="350" height="240" frameborder="0"></iframe>
 </main>
 <footer-component></footer-component>
 <script src="scripts/script.js"></script>

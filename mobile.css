@@ -15,6 +15,7 @@
         background-color: rgba(0, 0, 0, 0);
         border: none;
         margin-top: 2vh;
+        cursor: pointer;
     }
 
     .head-menu {
@@ -438,6 +439,13 @@
 
         .image-slider img {
             max-height: 35vh !important;
+        }
+    }
+
+    .text-image-container {
+        img {
+            float: inherit;
+            width: 60vw;
         }
     }
 }
