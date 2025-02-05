@@ -14,14 +14,14 @@
         display: block;
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        margin-top: 2vh;
+        margin-top: 0;
         cursor: pointer;
     }
 
     .head-menu {
         visibility: hidden;
         position: fixed;
-        top: 95px;
+        top: 18vh;
         right: 100vw;
         width: 100vw;
         min-height: 75%;
