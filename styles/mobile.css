@@ -1,9 +1,19 @@
 @media (max-width: 1024px) {
+    @media (min-height: 500px) {
+        .head-banner, .head-background {
+            height: 75px !important;
+        }
+
+        .head-menu {
+            top: 75px !important;
+        }
+    }
+
     .head-banner, .head-background {
         z-index: 1000;
         position: fixed;
         top: 0;
-        max-height: 18vh;
+        height: 15vh;
     }
 
     body {
@@ -21,7 +31,7 @@
     .head-menu {
         visibility: hidden;
         position: fixed;
-        top: 18vh;
+        top: 15vh;
         right: 100vw;
         width: 100vw;
         min-height: 75%;
