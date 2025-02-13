@@ -1,10 +1,10 @@
 #head-photos {
     display: flex;
     margin: 0 10vw;
+}
 
-    img {
-        max-width: 40vw;
-    }
+#head-photos img {
+    max-width: 40vw;
 }
 
 .table {
@@ -18,72 +18,71 @@
 #advantages {
     list-style-type: none;
     padding: 0 0 0 1vw;
+}
 
-    li h3::before {
-        content: "✔";
-        color: chartreuse;
-        padding-right: 0.5rem;
-    }
+#advantages li h3::before {
+    content: "✔";
+    color: chartreuse;
+    padding-right: 0.5rem;
+}
 
-    li h3 {
-        color: darkgreen;
-        margin: 5px 0;
-    }
+#advantages li h3 {
+    color: darkgreen;
+    margin: 5px 0;
+}
 
-    li p {
-        margin: 10px 1vw;
-    }
+#advantages li p {
+    margin: 10px 1vw;
 }
 
 #advantages-photos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
 
-    .adv-with-photo {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 28vw;
-        margin: 1rem;
-        padding: 1rem;
-        align-items: center;
-        position: relative;
+#advantages-photos .adv-with-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28vw;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    position: relative;
+    border: 2px black solid;
+    border-radius: 10px;
+}
 
-        border: 2px black solid;
-        border-radius: 10px;
+#advantages-photos .adv-with-photo img {
+    bottom: 1rem;
+    left: 1rem;
+    width: 100%;
+}
 
-        img {
-            bottom: 1rem;
-            left: 1rem;
-            width: 100%;
-        }
+#advantages-photos .adv-with-photo h3 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1.2rem;
+    height: 2rem;
+}
 
-        h3 {
-            text-align: center;
-            margin-top: 0;
-            padding-top: 0;
-            line-height: 1.2rem;
-            height: 2rem;
-        }
+#advantages-photos .adv-with-photo p {
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
 
-        p {
-            text-align: center;
-            opacity: 0;
-            position: absolute;
-            bottom: 0;
-            margin: 1rem;
-            padding: 0.5rem;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.4);
-            line-height: 1.5rem;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-
-        &:hover p {
-            opacity: 1 !important;
-        }
-    }
+#advantages-photos .adv-with-photo:hover p {
+    opacity: 1 !important;
 }
 
 .equipment {
@@ -137,67 +136,65 @@
     height: 100vh;
     z-index: 111111;
     background-color: rgba(0, 0, 0, 0.4);
+}
 
-    #pop-up {
-        position: fixed;
-        margin: 5vh 5vw;
-        background-color: white;
-        overflow: auto;
-        border-radius: 2rem;
+#pop-up-background.active #pop-up {
+    position: fixed;
+    margin: 5vh 5vw;
+    background-color: white;
+    overflow: auto;
+    border-radius: 2rem;
+}
 
-        .close-icon {
-            position: absolute;
-            max-width: 20px;
-            right: 1rem;
-            top: 1rem;
-            transition: 0.5s;
+#pop-up-background.active #pop-up .close-icon {
+    position: absolute;
+    max-width: 20px;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.5s;
+}
 
-            &:hover {
-                transform: rotate(90deg) scale(1.15);
-            }
-        }
+#pop-up-background.active #pop-up .close-icon:hover {
+    transform: rotate(90deg) scale(1.15);
+}
 
-        .unordered {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
+#pop-up-background.active #pop-up .unordered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (max-width: 1260px) {
-    #advantages-photos {
-        .adv-with-photo {
-            width: 26vw;
+    #advantages-photos .adv-with-photo {
+        width: 26vw;
+    }
 
-            img {
-                max-width: 26vw;
-            }
-        }
+    #advantages-photos .adv-with-photo img {
+        max-width: 26vw;
     }
 }
 
 @media (max-width: 1024px) {
     #advantages-photos {
         grid-template-columns: 1fr 1fr;
+    }
 
-        .adv-with-photo {
-            width: 40vw;
+    #advantages-photos .adv-with-photo {
+        width: 40vw;
+    }
 
-            img {
-                min-width: 40vw;
-            }
-        }
+    #advantages-photos .adv-with-photo img {
+        min-width: 40vw;
     }
 }
 
 @media (max-width: 900px) {
     #head-photos {
         margin: 0 3vw;
+    }
 
-        img {
-            max-width: 47vw;
-        }
+    #head-photos img {
+        max-width: 47vw;
     }
 }
 
@@ -206,11 +203,11 @@
         grid-template-columns: 1fr;
     }
 
-    .adv-with-photo {
+    #advantages-photos .adv-with-photo {
         min-width: 86vw;
+    }
 
-        img {
-            min-width: 86vw !important;
-        }
+    #advantages-photos .adv-with-photo img {
+        min-width: 86vw !important;
     }
 }
