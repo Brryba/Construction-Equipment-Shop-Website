@@ -75,25 +75,23 @@
 
         .map {
             width: 100%;
+        }
 
-            &.mobile {
-                display: none;
-            }
+        .map.mobile {
+            display: none;
+        }
 
-            &.desktop {
-                display: block;
-            }
+        .map.desktop {
+            display: block;
         }
 
         @media (max-width: 768px) {
-            .map {
-                &.desktop {
-                    display: none;
-                }
+            .map.desktop {
+                display: none;
+            }
 
-                &.mobile {
-                    display: block;
-                }
+            .map.mobile {
+                display: block;
             }
         }
 
