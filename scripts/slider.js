@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sliderIndexes[sliders[i].id] = 1;
         showSlides(1, sliders[i].id);
     }
-    console.log(sliderIndexes);
 });
 
 function plusSlides(n, sliderId) {
@@ -23,10 +22,9 @@ function currentSlide(n, sliderId) {
 function showSlides(n, sliderId) {
     let i;
     let slider = document.getElementById(sliderId);
-    console.log("Slider name:" + sliderId);
-    console.log("Slider" + slider);
     let slides = slider.getElementsByClassName("mySlides");
-    let dots = slider.getElementsByClassName("dot");
+    let dotsContainer = document.querySelector(`[slideshow-container-name="${sliderId}"]`);
+    let dots = dotsContainer ? dotsContainer.getElementsByClassName("dot") : [];
     if (n > slides.length) {
         sliderIndexes[sliderId] = 1
     }
@@ -39,7 +37,6 @@ function showSlides(n, sliderId) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    console.log(sliderIndexes);
     slides[sliderIndexes[sliderId] - 1].style.display = "block";
     dots[sliderIndexes[sliderId] - 1].className += " active";
 }
