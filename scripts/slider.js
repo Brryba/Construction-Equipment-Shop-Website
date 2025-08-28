@@ -1,23 +1,37 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+const sliderIndexes = {};
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders =
+        document.getElementsByClassName("slideshow-container");
+    for (let i = 0; i < sliders.length; i++) {
+        sliderIndexes[sliders[i].id] = 1;
+        showSlides(1, sliders[i].id);
+    }
+    console.log(sliderIndexes);
+});
+
+function plusSlides(n, sliderId) {
+    sliderIndexes[sliderId] += n
+    showSlides(sliderIndexes[sliderId], sliderId);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(n, sliderId) {
+    sliderIndexes[sliderId] = n
+    showSlides(sliderIndexes[sliderId], sliderId);
 }
 
-function showSlides(n) {
+function showSlides(n, sliderId) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
+    let slider = document.getElementById(sliderId);
+    console.log("Slider name:" + sliderId);
+    console.log("Slider" + slider);
+    let slides = slider.getElementsByClassName("mySlides");
+    let dots = slider.getElementsByClassName("dot");
     if (n > slides.length) {
-        slideIndex = 1
+        sliderIndexes[sliderId] = 1
     }
     if (n < 1) {
-        slideIndex = slides.length
+        sliderIndexes[sliderId] = slides.length
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -25,6 +39,7 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    console.log(sliderIndexes);
+    slides[sliderIndexes[sliderId] - 1].style.display = "block";
+    dots[sliderIndexes[sliderId] - 1].className += " active";
 }
