@@ -170,6 +170,11 @@
         margin: 2%;
     }
 
+    .menu-card img {
+            max-height: 200px;
+        min-height: 200px;
+    }
+
     .rent-types {
         column-gap: 3vw;
         row-gap: 5vh;

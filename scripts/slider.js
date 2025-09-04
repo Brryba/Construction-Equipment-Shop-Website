@@ -24,7 +24,7 @@ function showSlides(n, sliderId) {
     let slider = document.getElementById(sliderId);
     let slides = slider.getElementsByClassName("mySlides");
     let dotsContainer = document.querySelector(`[slideshow-container-name="${sliderId}"]`);
-    let dots = dotsContainer ? dotsContainer.getElementsByClassName("dot") : [];
+    let dots = dotsContainer.getElementsByClassName("dot");
     if (n > slides.length) {
         sliderIndexes[sliderId] = 1
     }

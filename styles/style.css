@@ -194,8 +194,9 @@ body, main {
 }
 
 .menu-card {
-    display: grid;
-    grid-template-rows: 300px 3fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 3px solid #003366;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -205,12 +206,14 @@ body, main {
 }
 
 .menu-card img {
+    max-height: 250px;
+    min-height: 250px;
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
-.menu-card h2 {
+.menu-card .title {
     display: flex;
     justify-content: center;
     align-items: center;
