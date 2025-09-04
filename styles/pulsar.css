@@ -7,6 +7,11 @@
     max-width: 40vw;
 }
 
+.head-photo {
+    margin: 0 40%;
+    max-width: 20%;
+}
+
 .table {
     margin-bottom: 1rem;
 }
@@ -140,9 +145,12 @@
 
 #pop-up-background.active #pop-up {
     position: fixed;
-    margin: 5vh 5vw;
+    top: 5vh;
+    bottom: 5vh;
+    left: 5vw;
+    right: 5vw;
     background-color: white;
-    overflow: auto;
+    overflow-y: auto;
     border-radius: 2rem;
 }
 
@@ -196,6 +204,12 @@
     #head-photos img {
         max-width: 47vw;
     }
+
+    .head-photo {
+        max-width: 30%;
+        margin: 0 35%;
+        padding-bottom: 1rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -209,5 +223,10 @@
 
     #advantages-photos .adv-with-photo img {
         min-width: 86vw !important;
+    }
+
+    .head-photo {
+        margin: 0 30%;
+        max-width: 40%;
     }
 }
